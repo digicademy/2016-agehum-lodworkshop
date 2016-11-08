@@ -1,0 +1,56 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix tgn: <http://vocab.getty.edu/tgn/> .
+@prefix bio: <http://purl.org/vocab/bio/0.1/> .
+@prefix tei: <http://www.tei-c.org/ns/1.0> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix crm: <http://erlangen-crm.org/160331/> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix owltime: <http://www.w3.org/2006/time#> .
+@prefix epidat: <http://www.steinheim-institut.de/cgi-bin/epidat?id=> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+epidat:aha-13 a crm:E19_Physical_Object ;
+	crm:P3_has_note "Breite, hochrechteckige Sandsteinstele mit geradem Abschluss. Das verdoppelte Schriftfeld wird von vorgesetzten Säulen gerahmt, die einen Rundbogen tragen. Die erste Zeile folgt dem Rundbogen, darunter ist das Symbol aus einer erhabenen, rechteckigen Tafel herausgearbeitet. Zl 2 ist zentriert, die Einleitungsformeln in Zl 3 wurden jeweils mittig über die folgenden Eulogien gesetzt, die - jeweils rechtsbündig angebracht - durch eine senkrechte Linie voneinander getrennt sind. Die wiederum zentrierte Schlussformel wird durch deutlich größere Buchstaben hervorgehoben."@de ;
+	crm:P9_consists_of _:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E57_Material-aha-13 .
+
+_:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E57_Material-aha-13 a crm:E57_Material ;
+	crm:P3_has_note "Sandstein"@de .
+
+epidat:aha-13 crm:P78_is_identified_by _:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E50_Date-aha-13 .
+
+_:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E50_Date-aha-13 a crm:E50_Date ;
+	crm:P3_has_note "1879-12-08"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+epidat:aha-13 crm:P131i_identifies _:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E21_Person-aha-13-1 , _:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E21_Person-aha-13-2 .
+
+_:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E21_Person-aha-13-1 a crm:E21_Person .
+
+_:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E21_Person-aha-13-2 a crm:E21_Person .
+
+_:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E21_Person-aha-13-1 crm:P131_is_identified_by _:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E82_Actor_Appellation-aha-13-1 .
+
+_:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E21_Person-aha-13-2 crm:P131_is_identified_by _:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E82_Actor_Appellation-aha-13-2 .
+
+_:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E82_Actor_Appellation-aha-13-1 a crm:E82_Actor_Appellation .
+
+_:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E82_Actor_Appellation-aha-13-2 a crm:E82_Actor_Appellation .
+
+_:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E82_Actor_Appellation-aha-13-1 crm:P3_has_note "Elieser ben Josef Hakohen"@de .
+
+_:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E82_Actor_Appellation-aha-13-2 crm:P3_has_note "Jehuda ben Josef Hakohen"@de .
+
+_:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E21_Person-aha-13-1 crm:P2_has_type _:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E55_Type-aha-13-1 .
+
+_:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E21_Person-aha-13-2 crm:P2_has_type _:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E55_Type-aha-13-2 .
+
+_:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E55_Type-aha-13-1 a crm:E55_Type .
+
+_:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E55_Type-aha-13-2 a crm:E55_Type .
+
+_:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E55_Type-aha-13-1 crm:P3_has_note "Mann"@de .
+
+_:genid-748ce711703d4acf9a33ad10ebc91713-genid-df9629cf00de45388c44e0c484577f17-E55_Type-aha-13-2 crm:P3_has_note "Mann"@de .

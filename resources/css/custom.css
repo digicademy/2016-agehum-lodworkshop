@@ -1,0 +1,48 @@
+#step-1 h1 {
+	font-size: 88px;
+}
+
+code + .numbering {
+	padding-top: 10px;
+}
+
+code,
+code + ul.numbering li {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.xtriples + .numbering {
+	padding-top: 8px;
+}
+
+.xtriples,
+.xtriples + ul.numbering li {
+	font-size: 14px;
+	line-height: 1.2;
+}
+
+.xtriples-config {
+	margin-top: -10px;
+	margin-bottom: -20px;
+}
+
+.stats td {
+	line-height: 1.5;
+}
+
+.stats .col1 {
+	width: 53%;
+}
+
+.stats .col2 {
+	width: 47%;
+}
+
+.pull-up-15 {
+	margin-bottom: -25px;
+}
+
+.pull-up-25 {
+	margin-bottom: -25px;
+}

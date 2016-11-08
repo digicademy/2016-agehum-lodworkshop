@@ -1,0 +1,155 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="1232pt" height="237pt" viewBox="0.00 0.00 1232.00 237.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 233)">
+<title>d1e255</title>
+<polygon style="fill:white;stroke:white;" points="-4,4 -4,-233 1228,-233 1228,4 -4,4"/>
+<!-- A1 -->
+<g id="node1" class="node">
+            <title>A1</title>
+<polygon style="fill:none;stroke:black;" points="938,-116 854,-116 854,-82 938,-82 938,-116"/>
+<text text-anchor="middle" x="896" y="-103" style="font-family:Times New Roman;font-size:10.00px;">crm:E55_Type:</text>
+<text text-anchor="middle" x="896" y="-90" style="font-family:Times New Roman;font-size:10.00px;"> </text>
+</g>
+<!-- &quot;Mann&quot; -->
+<g id="node3" class="node">
+            <title>"Mann"</title>
+<text text-anchor="middle" x="1150" y="-127.5" style="font-family:Times New Roman;font-size:10.00px;">"Mann"</text>
+</g>
+<!-- A1&#45;&gt;&quot;Mann&quot; -->
+<g id="edge2" class="edge">
+            <title>A1-&gt;"Mann"</title>
+<path style="fill:none;stroke:blue;" d="M939,-104C987,-110 1066,-120 1113,-126"/>
+<polygon style="fill:blue;stroke:blue;" points="1112.7,-129.488 1123,-127 1113.4,-122.522 1112.7,-129.488"/>
+<text text-anchor="middle" x="1023" y="-121.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P3_has_note</text>
+</g>
+<!-- A3 -->
+<g id="node4" class="node">
+            <title>A3</title>
+<polygon style="fill:none;stroke:black;" points="593,-200 497,-200 497,-166 593,-166 593,-200"/>
+<text text-anchor="middle" x="545" y="-187" style="font-family:Times New Roman;font-size:10.00px;">crm:E21_Person:</text>
+<text text-anchor="middle" x="545" y="-174" style="font-family:Times New Roman;font-size:10.00px;"> </text>
+</g>
+<!-- A4 -->
+<g id="node6" class="node">
+            <title>A4</title>
+<polygon style="fill:none;stroke:black;" points="938,-172 854,-172 854,-138 938,-138 938,-172"/>
+<text text-anchor="middle" x="896" y="-159" style="font-family:Times New Roman;font-size:10.00px;">crm:E55_Type:</text>
+<text text-anchor="middle" x="896" y="-146" style="font-family:Times New Roman;font-size:10.00px;"> </text>
+</g>
+<!-- A3&#45;&gt;A4 -->
+<g id="edge4" class="edge">
+            <title>A3-&gt;A4</title>
+<path style="fill:none;stroke:blue;" d="M594,-177C623,-173 660,-169 693,-166 745,-161 803,-158 843,-157"/>
+<polygon style="fill:blue;stroke:blue;" points="843.398,-160.478 853,-156 842.701,-153.512 843.398,-160.478"/>
+<text text-anchor="middle" x="752" y="-169.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P2_has_type</text>
+</g>
+<!-- A5 -->
+<g id="node8" class="node">
+            <title>A5</title>
+<polygon style="fill:none;stroke:black;" points="970,-228 822,-228 822,-194 970,-194 970,-228"/>
+<text text-anchor="middle" x="896" y="-215" style="font-family:Times New Roman;font-size:10.00px;">crm:E82_Actor_Appellation:</text>
+<text text-anchor="middle" x="896" y="-202" style="font-family:Times New Roman;font-size:10.00px;"> </text>
+</g>
+<!-- A3&#45;&gt;A5 -->
+<g id="edge6" class="edge">
+            <title>A3-&gt;A5</title>
+<path style="fill:none;stroke:blue;" d="M594,-187C650,-192 743,-199 812,-204"/>
+<polygon style="fill:blue;stroke:blue;" points="811.701,-207.488 822,-205 812.398,-200.522 811.701,-207.488"/>
+<text text-anchor="middle" x="752" y="-205.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P131_is_identified_by</text>
+</g>
+<!-- A4&#45;&gt;&quot;Mann&quot; -->
+<g id="edge22" class="edge">
+            <title>A4-&gt;"Mann"</title>
+<path style="fill:none;stroke:blue;" d="M939,-151C987,-146 1066,-138 1113,-134"/>
+<polygon style="fill:blue;stroke:blue;" points="1113.4,-137.478 1123,-133 1112.7,-130.512 1113.4,-137.478"/>
+<text text-anchor="middle" x="1023" y="-149.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P3_has_note</text>
+</g>
+<!-- &quot;Jehuda&quot; -->
+<g id="node19" class="node">
+            <title>"Jehuda"</title>
+<text text-anchor="middle" x="1150" y="-208.5" style="font-family:Times New Roman;font-size:10.00px;">"Jehuda"</text>
+</g>
+<!-- A5&#45;&gt;&quot;Jehuda&quot; -->
+<g id="edge16" class="edge">
+            <title>A5-&gt;"Jehuda"</title>
+<path style="fill:none;stroke:blue;" d="M970,-211C1017,-211 1074,-211 1112,-211"/>
+<polygon style="fill:blue;stroke:blue;" points="1112,-214.5 1122,-211 1112,-207.5 1112,-214.5"/>
+<text text-anchor="middle" x="1023" y="-214.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P3_has_note</text>
+</g>
+<!-- http://www.steinheim&#45;institut.de/cgi&#45;bin/epidat?id=aha&#45;13 -->
+<g id="node9" class="node">
+            <title>http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13</title>
+<a xlink:href="http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13" xlink:title="crm:E19_Physical_Object:\nhttp://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13">
+<polygon style="fill:none;stroke:black;" points="289,-143 1,-143 1,-109 289,-109 289,-143"/>
+<text text-anchor="middle" x="145" y="-130" style="font-family:Times New Roman;font-size:10.00px;fill:blue;">crm:E19_Physical_Object:</text>
+<text text-anchor="middle" x="145" y="-117" style="font-family:Times New Roman;font-size:10.00px;fill:blue;">http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13</text>
+</a>
+</g>
+<!-- http://www.steinheim&#45;institut.de/cgi&#45;bin/epidat?id=aha&#45;13&#45;&gt;A3 -->
+<g id="edge12" class="edge">
+            <title>http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13-&gt;A3</title>
+<path style="fill:none;stroke:blue;" d="M264,-143C338,-153 428,-166 486,-175"/>
+<polygon style="fill:blue;stroke:blue;" points="485.701,-178.488 496,-176 486.398,-171.522 485.701,-178.488"/>
+<text text-anchor="middle" x="349" y="-163.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P131i_identifies</text>
+</g>
+<!-- &quot;Breite, hochrechteckige Sandsteinstele mit geradem\nAbschluss. Das ver [...]&quot; -->
+<g id="node11" class="node">
+            <title>"Breite, hochrechteckige Sandsteinstele mit geradem\nAbschluss. Das ver [...]"</title>
+<text text-anchor="middle" x="545" y="-130" style="font-family:Times New Roman;font-size:10.00px;">"Breite, hochrechteckige Sandsteinstele mit geradem</text>
+<text text-anchor="middle" x="545" y="-117" style="font-family:Times New Roman;font-size:10.00px;">Abschluss. Das ver [...]"</text>
+</g>
+<!-- http://www.steinheim&#45;institut.de/cgi&#45;bin/epidat?id=aha&#45;13&#45;&gt;&quot;Breite, hochrechteckige Sandsteinstele mit geradem\nAbschluss. Das ver [...]&quot; -->
+<g id="edge8" class="edge">
+            <title>http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13-&gt;"Breite, hochrechteckige Sandsteinstele mit geradem\nAbschluss. Das ver [...]"</title>
+<path style="fill:none;stroke:blue;" d="M290,-126C325,-126 363,-126 398,-126"/>
+<polygon style="fill:blue;stroke:blue;" points="398,-129.5 408,-126 398,-122.5 398,-129.5"/>
+<text text-anchor="middle" x="349" y="-129.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P3_has_note</text>
+</g>
+<!-- A0 -->
+<g id="node13" class="node">
+            <title>A0</title>
+<polygon style="fill:none;stroke:black;" points="593,-86 497,-86 497,-52 593,-52 593,-86"/>
+<text text-anchor="middle" x="545" y="-73" style="font-family:Times New Roman;font-size:10.00px;">crm:E21_Person:</text>
+<text text-anchor="middle" x="545" y="-60" style="font-family:Times New Roman;font-size:10.00px;"> </text>
+</g>
+<!-- http://www.steinheim&#45;institut.de/cgi&#45;bin/epidat?id=aha&#45;13&#45;&gt;A0 -->
+<g id="edge10" class="edge">
+            <title>http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13-&gt;A0</title>
+<path style="fill:none;stroke:blue;" d="M264,-109C338,-99 428,-86 486,-77"/>
+<polygon style="fill:blue;stroke:blue;" points="486.398,-80.4778 496,-76 485.701,-73.5125 486.398,-80.4778"/>
+<text text-anchor="middle" x="349" y="-104.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P131i_identifies</text>
+</g>
+<!-- A0&#45;&gt;A1 -->
+<g id="edge18" class="edge">
+            <title>A0-&gt;A1</title>
+<path style="fill:none;stroke:blue;" d="M594,-73C659,-79 775,-89 843,-94"/>
+<polygon style="fill:blue;stroke:blue;" points="842.701,-97.4875 853,-95 843.398,-90.5222 842.701,-97.4875"/>
+<text text-anchor="middle" x="752" y="-93.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P2_has_type</text>
+</g>
+<!-- A2 -->
+<g id="node15" class="node">
+            <title>A2</title>
+<polygon style="fill:none;stroke:black;" points="970,-60 822,-60 822,-26 970,-26 970,-60"/>
+<text text-anchor="middle" x="896" y="-47" style="font-family:Times New Roman;font-size:10.00px;">crm:E82_Actor_Appellation:</text>
+<text text-anchor="middle" x="896" y="-34" style="font-family:Times New Roman;font-size:10.00px;"> </text>
+</g>
+<!-- A0&#45;&gt;A2 -->
+<g id="edge20" class="edge">
+            <title>A0-&gt;A2</title>
+<path style="fill:none;stroke:blue;" d="M594,-62C622,-58 660,-54 693,-51 732,-47 775,-45 812,-44"/>
+<polygon style="fill:blue;stroke:blue;" points="812,-47.5001 822,-44 812,-40.5001 812,-47.5001"/>
+<text text-anchor="middle" x="752" y="-54.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P131_is_identified_by</text>
+</g>
+<!-- &quot;Elieser ben Josef Hakohen&quot; -->
+<g id="node17" class="node">
+            <title>"Elieser ben Josef Hakohen"</title>
+<text text-anchor="middle" x="1150" y="-40.5" style="font-family:Times New Roman;font-size:10.00px;">"Elieser ben Josef Hakohen"</text>
+</g>
+<!-- A2&#45;&gt;&quot;Elieser ben Josef Hakohen&quot; -->
+<g id="edge14" class="edge">
+            <title>A2-&gt;"Elieser ben Josef Hakohen"</title>
+<path style="fill:none;stroke:blue;" d="M970,-43C1000,-43 1035,-43 1066,-43"/>
+<polygon style="fill:blue;stroke:blue;" points="1066,-46.5001 1076,-43 1066,-39.5001 1066,-46.5001"/>
+<text text-anchor="middle" x="1023" y="-46.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P3_has_note</text>
+</g>
+</g>
+</svg>

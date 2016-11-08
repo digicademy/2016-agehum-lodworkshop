@@ -1,0 +1,181 @@
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:tgn="http://vocab.getty.edu/tgn/" xmlns:bio="http://purl.org/vocab/bio/0.1/" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:crm="http://erlangen-crm.org/160331/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:owltime="http://www.w3.org/2006/time#" xmlns:epidat="http://www.steinheim-institut.de/cgi-bin/epidat?id=" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+<rdf:Description rdf:about="http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13">
+	<rdf:type rdf:resource="http://erlangen-crm.org/160331/E19_Physical_Object"/>
+	<crm:P3_has_note xml:lang="de">Breite, hochrechteckige Sandsteinstele mit geradem Abschluss. Das verdoppelte Schriftfeld wird von vorgesetzten Säulen gerahmt, die einen Rundbogen tragen. Die erste Zeile folgt dem Rundbogen, darunter ist das Symbol aus einer erhabenen, rechteckigen Tafel herausgearbeitet. Zl 2 ist zentriert, die Einleitungsformeln in Zl 3 wurden jeweils mittig über die folgenden Eulogien gesetzt, die - jeweils rechtsbündig angebracht - durch eine senkrechte Linie voneinander getrennt sind. Die wiederum zentrierte Schlussformel wird durch deutlich größere Buchstaben hervorgehoben.</crm:P3_has_note>
+	<crm:P9_consists_of rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E57_Material-aha-13"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E57_Material-aha-13">
+	<rdf:type rdf:resource="http://erlangen-crm.org/160331/E57_Material"/>
+	<crm:P3_has_note xml:lang="de">Sandstein</crm:P3_has_note>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13">
+	<crm:P78_is_identified_by rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E50_Date-aha-13"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E50_Date-aha-13">
+	<rdf:type rdf:resource="http://erlangen-crm.org/160331/E50_Date"/>
+	<crm:P3_has_note rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1879-12-08</crm:P3_has_note>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13">
+	<crm:P131i_identifies rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E21_Person-aha-13-1"/>
+	<crm:P131i_identifies rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E21_Person-aha-13-2"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E21_Person-aha-13-1">
+	<rdf:type rdf:resource="http://erlangen-crm.org/160331/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E21_Person-aha-13-2">
+	<rdf:type rdf:resource="http://erlangen-crm.org/160331/E21_Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E21_Person-aha-13-1">
+	<crm:P131_is_identified_by rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E82_Actor_Appellation-aha-13-1"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E21_Person-aha-13-2">
+	<crm:P131_is_identified_by rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E82_Actor_Appellation-aha-13-2"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E82_Actor_Appellation-aha-13-1">
+	<rdf:type rdf:resource="http://erlangen-crm.org/160331/E82_Actor_Appellation"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E82_Actor_Appellation-aha-13-2">
+	<rdf:type rdf:resource="http://erlangen-crm.org/160331/E82_Actor_Appellation"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E82_Actor_Appellation-aha-13-1">
+	<crm:P3_has_note xml:lang="de">Elieser ben Josef Hakohen</crm:P3_has_note>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E82_Actor_Appellation-aha-13-2">
+	<crm:P3_has_note xml:lang="de">Jehuda ben Josef Hakohen</crm:P3_has_note>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E21_Person-aha-13-1">
+	<crm:P2_has_type rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E55_Type-aha-13-1"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E21_Person-aha-13-2">
+	<crm:P2_has_type rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E55_Type-aha-13-2"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E55_Type-aha-13-1">
+	<rdf:type rdf:resource="http://erlangen-crm.org/160331/E55_Type"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E55_Type-aha-13-2">
+	<rdf:type rdf:resource="http://erlangen-crm.org/160331/E55_Type"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E55_Type-aha-13-1">
+	<crm:P3_has_note xml:lang="de">Mann</crm:P3_has_note>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E55_Type-aha-13-2">
+	<crm:P3_has_note xml:lang="de">Mann</crm:P3_has_note>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E21_Person-aha-13-1">
+	<crm:P2_has_type rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E69_Death-aha-13-1"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E21_Person-aha-13-2">
+	<crm:P2_has_type rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E69_Death-aha-13-2"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E69_Death-aha-13-1">
+	<rdf:type rdf:resource="http://erlangen-crm.org/160331/E69_Death"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E69_Death-aha-13-2">
+	<rdf:type rdf:resource="http://erlangen-crm.org/160331/E69_Death"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E69_Death-aha-13-1">
+	<crm:P78_is_identified_by rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E50_Date-aha-13-1"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E69_Death-aha-13-2">
+	<crm:P78_is_identified_by rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E50_Date-aha-13-2"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E50_Date-aha-13-1">
+	<rdf:type rdf:resource="http://erlangen-crm.org/160331/E50_Date"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E50_Date-aha-13-2">
+	<rdf:type rdf:resource="http://erlangen-crm.org/160331/E50_Date"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E50_Date-aha-13-1">
+	<crm:P3_has_note rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1879-12-08</crm:P3_has_note>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E50_Date-aha-13-2">
+	<crm:P3_has_note rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1879-12-09</crm:P3_has_note>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13">
+	<crm:P56_bears_feature rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E34_Inscription-aha-13"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E34_Inscription-aha-13">
+	<rdf:type rdf:resource="http://erlangen-crm.org/160331/E34_Inscription"/>
+	<crm:P3_has_note xml:lang="he">‎‏הנאהבים והנעימים בחייהם ובמותם לא נפרדו‏‎
+     
+     ‎‏עוברי בעמק הבכא ראו‏‎
+     
+     ‎‏פה // ופה‏‎
+     
+     ‎‏אמלל פרח לא צץ ציץ // יפה נוף הדר הורו‏‎
+     
+     ‎‏ידיד אבות ענף יפה // וחדות אמו דרך כל‏‎
+     
+     ‎‏זנח עולמו רך בשנים // הארץ הלך אחר אחיו‏‎
+     
+     ‎‏ה״ה אליעזר בן כ׳ יוסף // ולמחרתו יום ג׳ כ״ד כסלו‏‎
+     
+     ‎‏הכהן נקטף בעודו // בא המות שנית בחלוני‏‎
+     
+     ‎‏באבו לדאבון אבותיו // אבותיו המדכאים ויאמר‏‎
+     
+     ‎‏ביום ב׳ כ״ג כסלו תר״מ לפ״ק // גם אחיו יהודה יעלה‏‎
+     
+     ‎‏תנצב״ה‏‎</crm:P3_has_note>
+	<crm:P73_has_translation rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E33_Linguistic_Object-aha-13"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-55c24c72c20c491d9119bf2aa968f547-E33_Linguistic_Object-aha-13">
+	<rdf:type rdf:resource="http://erlangen-crm.org/160331/E33_Linguistic_Object"/>
+	<crm:P3_has_note xml:lang="de">Die Geliebten und Wohlgefälligen, in ihrem Leben und in ihrem Tode waren sie nicht getrennt
+     
+     Die ihr durchs Jammertal zieht, sehet,
+     
+     hier // und hier
+     
+     welkt die Blume, treibt keine Blüten, // schön von Angesicht, die Pracht seiner Eltern
+     
+     Liebling seiner Ahnen, ein schöner Zweig, // und Freude seiner Mutter, den Weg alles
+     
+     er verwarf seine Welt zart an Jahren, // Irdischen folgte er seinem Bruder,
+     
+     es ist Elieser, Sohn des geehrten Josef // und am folgenden Tag, Tag 3, 24. Kislev
+     
+     Hakohen, er wurde gepflückt noch // stieg der Tod erneut in die Fenster
+     
+     in seiner Blüte zum Kummer seiner Eltern // seiner erschütterten Eltern, und sagte:
+     
+     am Tag 2, 23. Kislev 640 der kleinen Zählung. // Auch sein Bruder Jehuda
+     Josef Hakohen
+      wird emporsteigen!
+     
+     Ihre Seelen seien eingebunden in das Bündel des Lebens</crm:P3_has_note>
+</rdf:Description>
+
+</rdf:RDF>

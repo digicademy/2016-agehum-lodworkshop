@@ -1,0 +1,12 @@
+PREFIX epidat:<http://www.steinheim-institut.de/cgi-bin/epidat?id=>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+PREFIX crm:<http://erlangen-crm.org/160331/>
+
+SELECT ?gender (COUNT(DISTINCT ?E55_Type) AS ?typeCount)
+WHERE {
+   ?E55_Type rdf:type <http://erlangen-crm.org/160331/E55_Type> .
+   ?E55_Type crm:P3_has_note ?gender .
+}
+GROUP BY ?gender
