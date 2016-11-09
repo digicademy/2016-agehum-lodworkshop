@@ -1,0 +1,64 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <https://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix corresp: <https://lod.academy/correspDesc/vocab/> .
+
+corresp:Letter a rdfs:Class ;
+    rdfs:subClassOf time:Instant ;
+    rdfs:label "Letter" .
+
+corresp:Recipient a rdfs:Class ;
+    rdfs:subClassOf foaf:Person ;
+    rdfs:comment "A person who receives a letter" ;
+    rdfs:label "Recipient" .
+
+corresp:Sender a rdfs:Class ;
+    rdfs:subClassOf foaf:Person ;
+    rdfs:comment "A person who sends a letter" ;
+    rdfs:label "Sender" .
+
+corresp:received a rdf:Property ;
+    rdfs:domain cd:Recipient ;
+    rdfs:range cd:Letter ;
+    rdfs:comment "The act of receiving a letter" ;
+    rdfs:label "receiving" .
+
+corresp:sent a rdf:Property ;
+    rdfs:domain cd:Sender ;
+    rdfs:range cd:Letter ;
+    rdfs:comment "The act of sending a letter" ;
+    rdfs:label "sending" ;
+    owl:inverseOf cd:receiving .
+
+corresp:communicating a rdf:Property ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Person ;
+    owl:sameAs cd:receiving , cd:sending .
+
+corresp:sentFrom a rdf:Property ;
+    rdfs:domain cd:Letter ;
+    rdfs:range geo:SpatialThing ;
+    rdfs:comment "A letter is sent from a place" ;
+    rdfs:label "sent from" .
+
+corresp:sentTo a rdf:Property ;
+    rdfs:domain cd:Letter ;
+    rdfs:range geo:SpatialThing ;
+    rdfs:comment "A letter is sent to a place" ;
+    rdfs:label "sent to" ;
+    owl:inverseOf cd:sentFrom .
+
+corresp:dateSent a rdf:Property ;
+    rdfs:subPropertyOf time:inXSDDateTime ;
+    rdfs:domain cd:Letter ;
+    rdfs:range xsd:dateTime .
+
+corresp:dateReceived a rdf:Property ;
+    rdfs:subPropertyOf time:inXSDDateTime ;
+    rdfs:domain cd:Letter ;
+    rdfs:range xsd:dateTime ;
+    owl:inverseOf cd:dateSent .

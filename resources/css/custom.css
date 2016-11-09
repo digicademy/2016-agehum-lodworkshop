@@ -2,47 +2,86 @@
 	font-size: 88px;
 }
 
-code + .numbering {
-	padding-top: 10px;
+.outer-top-right {
+	font-size: 11px;
+	fill: #000;
 }
 
-code,
-code + ul.numbering li {
-	font-size: 16px;
-	line-height: 1.5;
+#greuler-n836af52d06d5e8 text,
+#greuler-k6c1b87b6d8371 text,
+#greuler-xe3065f1bc60cc text {
+	fill: #E74C3C;
 }
 
-.xtriples + .numbering {
-	padding-top: 8px;
+.steps, .legend {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
 }
 
-.xtriples,
-.xtriples + ul.numbering li {
-	font-size: 14px;
-	line-height: 1.2;
+.steps li {
+	display: inline-block;
+	margin-right: 1em;
 }
 
-.xtriples-config {
-	margin-top: -10px;
-	margin-bottom: -20px;
+.steps li:before {
+	content: "";
 }
 
-.stats td {
-	line-height: 1.5;
+.steps a {
+	border: 1px solid #000;
+	/*	border-radius: 50%; */
+	display: inline-block;
+	height: 1.3em;
+	line-height: 1.3em;
+	margin: 0;
+	text-align: center;
+	width: 1.3em;
+	text-shadow: none;
+	text-decoration: none;
+	color: #000;
 }
 
-.stats .col1 {
-	width: 53%;
+.steps a:hover, .steps .current {
+	background: #000;
+	color: #FFF;
 }
 
-.stats .col2 {
-	width: 47%;
+.legend {
+	text-align: right;
 }
 
-.pull-up-15 {
-	margin-bottom: -25px;
+.legend li {
+	display: inline-block;
+	font-size: 22px;
+	margin-right: 1em;
+	padding-left: 0;
 }
 
-.pull-up-25 {
-	margin-bottom: -25px;
+.legend li:before {
+	position: relative;
+	content:"\25A0";
+	padding: 0 0.3em 0;
+	margin: 0;
+	top: 0;
+	left: 0;
+	font-size: 1.6em;
+	line-height: 1;
+}
+
+.legend li.none:before {
+	content:"";
+}
+
+#gnd:before {
+	color: #2980B9;
+}
+
+#cs:before {
+	color: #F44336;
+}
+
+#geonames:before {
+	color: #4CAF50
 }

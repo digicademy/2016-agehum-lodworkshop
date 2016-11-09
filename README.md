@@ -4,7 +4,7 @@
 
 ## Für die Nachnutzung von Forschungsdaten
 
-### Torsten Schrade
+### Autor: Torsten Schrade
 
 Workshop im Rahmen der Tagung der AG eHumanities der Union der deutschen Akademien der Wissenschaften
 
@@ -12,4 +12,4 @@ Die Daten zu dieser Präsentation finden sich unter https://github.com/digicadem
 
 Die Präsentation kann abgerufen werden unter: http://digicademy.github.io/2016-agehum-lodworkshop
 
-Veröffentlich unter [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), [Torsten Schrade](https://orcid.org/0000-0002-0953-2818)
+Veröffentlicht unter [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), [Torsten Schrade](https://orcid.org/0000-0002-0953-2818)

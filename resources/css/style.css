@@ -177,7 +177,6 @@ a {
 	pointer-events: none;
 	text-decoration: none;
 	color: #1e88e5;
-	font-weight: bold;
 }
 
 a:link, a:hover, a:focus, a:visited {
@@ -226,7 +225,7 @@ li {
 
 li:before {
 	position: relative;
-	margin-left: -1em;
+	margin-left: -0.5em;
 	left: -0.5em;
 	color: #C00000;
 }

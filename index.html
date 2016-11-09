@@ -96,20 +96,37 @@
             <h2>Gliederung</h2>
             <ol>
                 <li>
-                    Grundlagen
+                    Grundlagen <br/>
+                    <span class="small">
+                        5-Star LOD, URIs, Triple, Vokabularien und Ontologien, RDFS/OWL, Normdaten
+                        Serialisierungsformate, Reasoning, LOD als Basis für Nachnutzung, Bereitstellung
+                        von LOD
+                    </span>
                 </li>
-                <li>
-                    Modellieren
+                <li class="down-25">
+                    Modellieren <br/>
+                    <span class="small">
+                        Nützliche Vokabularien und Ontologien, RDF-Generierung, Modellierungsbeispiele
+                    </span>
                 </li>
-                <li>
-                    Abfragen
+                <li class="down-25">
+                    Abfragen <br/>
+                    <span class="small">
+                        SPARQL Grundlagen
+                    </span>
+                </li>
+                <li class="down-25">
+                    Visualisieren <br/>
+                    <span class="small">
+                        Visualisierungen mit sgvizler und d3sparql
+                    </span>
                 </li>
             </ol>
         </div>
 
         <div class="step">
             <h1 class="red">01</h1>
-            <h2 class="line-height-one-five">
+            <h2>
                Grundlagen
             </h2>
             <h3 class="red">
@@ -118,19 +135,63 @@
         </div>
 
         <div class="step">
-            <h2 style="position: relative; top: 10px;">
+            <h2>
+               Potentiale von LOD
+            </h2>
+            <h3 class="red up-25">
+               Semantische Verknüpfung und Analyse von Forschungsdaten
+            </h3>
+            <div class="mfp-lightbox center">
+                <a href="resources/img/linking-repositories.png">
+                    <img src="resources/img/linking-repositories.png" style="width: 80%; position: relative; left: 70px;" />
+                </a>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>
+               Das Semantic Web
+            </h2>
+            <h3 class="red up-25">
+               The »Giant Global Graph« bzw. die »LOD Cloud«
+            </h3>
+            <div class="mfp-lightbox center">
+                <a href="resources/img/lod-cloud.png">
+                    <img src="resources/img/lod-cloud.png" style="width: 70%;" />
+                </a>
+                <p class="small">
+                    Quelle: Linking Open Data cloud diagram 2014, by Max Schmachtenberg, Christian Bizer,
+                    Anja Jentzsch and Richard Cyganiak. <a href="http://lod-cloud.net/">http://lod-cloud.net/</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>
+               Nachnutzungsaspekte
+            </h2>
+            <h3 class="red up-25">
+               LOD als Nachnutzungsbasis für geisteswissenschaftliche Fachdaten
+            </h3>
+            <div class="mfp-lightbox center">
+                <p>Points</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>
               Grundlagen
             </h2>
-            <h3 class="red">Ziele und Hintergründe des Semantic Web</h3>
-            <ul class="medium">
+            <h3 class="red up-25">5-Star LOD</h3>
+            <ul class="medium line-height-one-five">
                 <li class="substep">
                     Vorschlag von Tim Berners-Lee: "The Semantic Web is an <strong>extension of the current web</strong> in which information
                     is given well-defined meaning, better enabling computers and people to work in cooperation" (<a href="http://www.sciam.com/article.cfm?articleID=00048144-10D2-1C70-84A9809EC588EF21">Quelle</a>)
                 </li>
                 <li class="substep">Das "Fife-Star" LOD Prinzip von Berners-Lee: (<a href="http://5stardata.info/de/">Quelle</a>)
-                    <ul>
+                    <ul class="line-height-one-five">
                         <li class="substep">
-                            ★ Stelle deine Daten im Web unter einer offenen Lizenz bereit. Das Format ist dabei egal
+                            ★ Stelle Daten im Web unter einer offenen Lizenz bereit. Das Format ist dabei egal
                         </li>
                         <li class="substep">
                             ★★ Stelle Daten in einem strukturierten Format bereit
@@ -139,13 +200,22 @@
                             ★★★ Verwende offene, nicht proprietäre Formate
                         </li>
                         <li class="substep">
-                            ★★★★ Verwende URIs um Dinge zu bezeichnen, damit deine Daten verlinkt werden können
+                            ★★★★ Verwende URIs um Dinge zu bezeichnen
                         </li>
                         <li class="substep">
                             ★★★★★ Verlinke deine Daten mit anderen Daten um Kontexte herzustellen
                         </li>
                     </ul>
                 </li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>
+              Grundlagen
+            </h2>
+            <h3 class="red up-25">Technische Hintergründe</h3>
+            <ul class="medium line-height-one-five">
                 <li class="substep">
                     Das Semantic Web baut auf den <strong>existierenden Web-Standards</strong> (URIs, HTTP, HTML, u.a.) auf
                 </li>
@@ -166,38 +236,23 @@
 
         <div class="step">
             <h2>
-               Das Semantic Web
-            </h2>
-            <h3 class="red pull-up">
-               The "Giant Global Graph" bzw. die "LOD-Cloud"
-            </h3>
-            <div class="mfp-lightbox center">
-                <a href="http://lod-cloud.net/versions/2014-08-30/lod-cloud.svg" style="border: none;">
-                    <img src="resources/img/lod-cloud.png" style="width: 80%; position: relative; left: 70px;" />
-                </a>
-                <p>
-                    Linking Open Data cloud diagram 2014, by Max Schmachtenberg, Christian Bizer, Anja Jentzsch and Richard Cyganiak.
-                    <a href="http://lod-cloud.net/">http://lod-cloud.net/</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="step">
-            <h2>
                Grundbegriffe
             </h2>
             <h3 class="red">URI</h3>
 
 <pre class="code-example">
 <code class="markdown">  foo://example.com:8042/over/there?name=duck#beak
-  \_/   \______________/\_________/ \_________/ \__/
-   |           |            |            |        |
-scheme     authority       path        query   fragment
+  \_/   \______________/\_________/ \_______/ \__/
+   |           |            |            |      |
+scheme     authority       path        query fragment
 </code></pre>
-<p>
-Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> aus fünf Teilen: <code>scheme</code> (Schema oder Protokoll), <code>authority</code> (Anbieter oder Server), <code>path</code> (Pfad), <code>query</code> (Abfrage) und <code>fragment</code> (Teil). Nur <strong>scheme und path</strong> müssen in jedem URI vorkommen.
-</p>
-<h4>Berners-Lee: <a href="https://www.w3.org/Provider/Style/URI.html"><em>Cool URIs don't change</em></a>!</h4>
+            <p class="medium">
+                Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> aus fünf Teilen:
+                <code>scheme</code> (Schema oder Protokoll), <code>authority</code> (Anbieter oder Server),
+                 <code>path</code> (Pfad), <code>query</code> (Abfrage) und <code>fragment</code> (Teil).
+                 Nur <strong>scheme, authority und path</strong> müssen in jedem URI vorkommen.
+            </p>
+            <h4>Berners-Lee: <a href="https://www.w3.org/Provider/Style/URI.html"><em>Cool URIs don't change</em></a>!</h4>
 
         </div>
 
@@ -205,17 +260,43 @@ Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> 
             <h2>
                Grundbegriffe
             </h2>
-            <h3 class="red">Triple</h3>
-<pre>
-<code class="xml">    <span class="subject-color">Goethe</span>           <span class="predicate-color">is a</span>              <span class="object-color">Person</span> ;
-                     <span class="predicate-color">sends</span>             <span class="object-color">Letter</span> .
+            <h3 class="red">Triple (Prinzip)</h3>
+<pre class="pull-25">
+<code class="xml">   <span class="subject-color">&lt;Goethe&gt;</span>          <span class="predicate-color">&lt;a&gt;</span>                 <span class="object-color">&lt;Sender&gt;</span> ;
+                     <span class="predicate-color">&lt;sent&gt;</span>              <span class="object-color">&lt;Letter&gt;</span> .
 
-    <span class="subject-color">Letter</span>           <span class="predicate-color">dates to</span>          <span class="object-color">1793</span> ;
-                     <span class="predicate-color">sent from</span>         <span class="object-color">Weimar</span> .
+   <span class="subject-color">&lt;Letter&gt;</span>          <span class="predicate-color">&lt;dateSent&gt;</span>          <span class="object-color">"1793"</span> ;
+                     <span class="predicate-color">&lt;sentFrom&gt;</span>          <span class="object-color">&lt;Weimar&gt;</span> .
 
-    <span class="subject-color">Weimar</span>           <span class="predicate-color">is a</span>              <span class="object-color">City</span> ;
-                     <span class="predicate-color">has latitude</span>      <span class="object-color">11.32</span> ;
-                     <span class="predicate-color">has longitude</span>     <span class="object-color">50.98</span> .
+   <span class="subject-color">&lt;Weimar&gt;</span>          <span class="predicate-color">&lt;a&gt;</span>                 <span class="object-color">&lt;City&gt;</span> ;
+                     <span class="predicate-color">&lt;lat&gt;</span>               <span class="object-color">"50.98"</span> ;
+                     <span class="predicate-color">&lt;long&gt;</span>              <span class="object-color">"11.32"</span> .
+</code>
+</pre>
+
+            <ul class="legend">
+                <li class="subject">Subjekt</li>
+                <li class="predicate">Prädikat</li>
+                <li class="object">Objekt</li>
+                <li class="none">&lt;...&gt; = URIs, "..." = Literale</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>
+               Grundbegriffe
+            </h2>
+            <h3 class="red">Triple (Turtle/RDF)</h3>
+<pre class="pull-25" style="width: 108%;">
+<code class="xml" style="font-size: 13px; padding-left: 0;">   <span class="subject-color">&lt;http://d-nb.info/gnd/118540238&gt;</span> <span class="predicate-color">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt;</span> <span class="object-color">&lt;https://lod.academy/correspDesc/vocab/#Sender&gt;</span> ;
+                                   <span class="predicate-color">&lt;https://lod.academy/correspDesc/vocab/#sent&gt;</span>      <span class="object-color">&lt;https://lod.academy/correspDesc/vocab/#Letter&gt;</span> .
+
+   <span class="subject-color">&lt;https://lod.academy/correspDesc/vocab/#Letter&gt;</span> <span class="predicate-color">&lt;https://lod.academy/correspDesc/vocab/#dateSent&gt;</span> <span class="object-color">"1793"</span> ;
+                                                   <span class="predicate-color">&lt;https://lod.academy/correspDesc/vocab/#sentFrom&gt;</span> <span class="object-color">&lt;http://www.geonames.org/2812482&gt;</span> .
+
+   <span class="subject-color">&lt;http://www.geonames.org/2812482&gt;</span> <span class="predicate-color">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt;</span> <span class="object-color">&lt;https://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing&gt;</span> ;
+                                     <span class="predicate-color">&lt;https://www.w3.org/2003/01/geo/wgs84_pos#lat&gt;</span>    <span class="object-color">"50.98"</span> ;
+                                     <span class="predicate-color">&lt;https://www.w3.org/2003/01/geo/wgs84_pos#long&gt;</span>   <span class="object-color">"11.32"</span> .
 </code>
 </pre>
 
@@ -229,35 +310,11 @@ Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> 
         <div class="step">
 
             <h2>Grundbegriffe</h2>
-            <h3 class="red">Normdaten, Reasoning</h3>
-
-            <ol class="steps">
-                <li><a href="#/step-8/#step1" id="step1">1</a></li>
-                <li><a href="#/step-8/#step2" id="step2">2</a></li>
-                <li><a href="#/step-8/#step3" id="step3">3</a></li>
-                <li><a href="#/step-8/#step4" id="step4">4</a></li>
-                <li><a href="#/step-8/#step5" id="step5">5</a></li>
-                <li><a href="#/step-8/#step6" id="step6">6</a></li>
-                <li><a href="#/step-8/#step7" id="step7">7</a></li>
-            </ol>
-
-            <ul class="legend">
-                <li id="cs"><a href="http://correspsearch.net/index.xql?l=de">correspSearch</a></li>
-                <li id="gnd"><a href="http://www.dnb.de/DE/Service/DigitaleDienste/LinkedData/linkeddata_node.html">GND</a></li>
-                <li id="geonames"><a href="http://www.geonames.org/ontology/documentation.html">Geonames</a></li>
-            </ul>
-
-            <div id="model"></div>
-        </div>
-
-        <div class="step">
-
-            <h2 style="margin-bottom: 0px;">Grundbegriffe</h2>
-            <h3 class="red">Vokabularien und Ontologien</h3>
+            <h3 class="red up-25">Vokabularien und Ontologien</h3>
             <div class="row">
                 <div class="eight columns">
-                    <ul class="medium">
-                        <li class="substep">Ontologien in der Informatik modellieren Mengen von Begriffen (<em>concepts</em>) und deren jeweilige Beziehungen untereinander</li>
+                    <ul class="small line-height-one-five">
+                        <li class="substep">Ontologien in der Informatik modellieren <strong>Mengen von Begriffen (<em>concepts</em>)</strong> und deren <strong>jeweilige Beziehungen</strong> untereinander</li>
                         <li class="substep">Über Ontologien können Informationsonzepte strukturiert beschrieben werden</li>
                         <li class="substep">Geisteswissenschaftliche Informationskonzepte könnten bspw. sein:
                             <ul>
@@ -273,19 +330,19 @@ Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> 
                                 <li><a href="http://xmlns.com/foaf/spec/">FOAF</a> (Personen)</li>
                                 <li><a href="http://purl.org/vocab/relationship/">REL</a> (Beziehungen zwischen Personen)</li>
                                 <li><a href="http://vocab.org/bio/">BIO</a> (Eigenschaften von Personen)</li>
-                                <li><a href="http://www.cidoc-crm.org/cidoc-crm/">CIDOC-CRM</a> (<a href="http://www.cidoc-crm.org/cidoc_graphical_representation_v_5_1/class_hierarchy.html">Klassen</a>) bzw. <a href="http://erlangen-crm.org/docs/ecrm/current/index.html">Erlangen-CRM</a> (Kulturelles Erbe)</li>
+                                <li><a href="http://www.cidoc-crm.org/cidoc-crm/">CIDOC-CRM</a> bzw. <a href="http://erlangen-crm.org/docs/ecrm/current/index.html">Erlangen-CRM</a> (Kulturelles Erbe)</li>
                                 <li>... und viele weitere: <a href="http://prefix.cc/">http://prefix.cc/</a> </li>
                             </ul>
                         </li>
                     </ul>
                 </div>
-                <div class="four columns mfp-lightbox">
-                    <img src="resources/img/owl.png" alt="" title="" style="width: 70%;">
-                    <p><a href="http://www.semaweb.org/dokumente/w3/TR/2004/REC-owl-features-20040210-DE.html">OWL (Web Ontology Language)</a></p>
+                <div class="four columns mfp-lightbox centered">
+                    <img src="resources/img/owl.png" alt="" title="" style="width: 60%;">
+                    <p class="small"><a href="http://www.semaweb.org/dokumente/w3/TR/2004/REC-owl-features-20040210-DE.html">OWL (Web Ontology Language)</a></p>
                     <a href="resources/img/concepts.jpg">
-                        <img src="resources/img/concepts.jpg" alt="" title="" style="width: 70%;">
+                        <img src="resources/img/concepts.jpg" alt="" title="" style="width: 60%;">
                     </a>
-                    <p>Ontologien modellieren Konzepte</p>
+                    <p class="small">Ontologien modellieren Konzepte</p>
                 </div>
             </div>
 
@@ -293,45 +350,113 @@ Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> 
 
         <div class="step">
             <h2>
-               Semantische Verknüpfung
+              Grundbegriffe
             </h2>
-            <h3 class="red pull-up">
-                LOD-Potentiale in geisteswissenschaftlichen Fachdaten
-            </h3>
-            <div class="mfp-lightbox center">
-                <a href="resources/img/linking-repositories.png">
-                    <img src="resources/img/linking-repositories.png" style="width: 80%; position: relative; left: 70px;" />
-                </a>
+            <h3 class="red up-25">RDFS &amp; OWL</h3>
+            <div class="row">
+                <div class="eight columns">
+                    <ul class="small line-height-one-five">
+                        <li class="substep">
+                            RDFS Definition
+                        </li>
+                        <li class="substep">
+                            OWL Definition
+                        </li>
+                    </ul>
+                </div>
+                <div class="four columns mfp-lightbox centered">
+                    Skizze "Klassen (classes) und Eigenschaften (properties)"
+                </div>
             </div>
         </div>
 
         <div class="step">
             <h2>
-             Semantische Fragestellungen
+              Beispiel »corresp«
             </h2>
-            <h3 class="red">Mögliche Analysen mit Hilfe von Semantic Web Technologien</h3>
-            <ul>
-                <li class="substep">Welche historischen Personen existieren in allen Repositorien in welchen spezifischen Kontexten?</li>
-                <li class="substep">Welche Grabsteinsymbole (christlich/jüdisch) existieren zu welchen Zeiten in den Fachdatenkorpora?</li>
-                <li class="substep">Können bestimmte geographische Muster im Auftreten bestimmter Symbole aus den Daten geschlussfolgert werden?</li>
-                <li class="substep">Können historische Phänomene wie bspw. Hungersnöte, Überflutungen oder Seuchen durch eine repositorienübergreifende Analyse zeitlich/geographisch eingegrenzt werden?</li>
+            <h3 class="red up-25">Eine kleine Ontologie für Briefkorrespondenzen</h3>
+            <h5>Modelliert auf Basis des &lt;correspDesc&gt; Moduls der TEI</h5>
+            <div class="row">
+                <div class="twelfe columns">
+                    <p>correspDesc.ttl step by step</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>
+              Beispiel »CIDOC-CRM«
+            </h2>
+            <h3 class="red up-25">Eine große Ontologie für Objekte des kulturellen Erbes</h3>
+            <div class="row">
+                <div class="twelfe columns">
+                    <p>CIDOC Klassendiagramm</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+
+            <h2>Grundbegriffe</h2>
+            <h3 class="red up-25">Normdaten, Reasoning</h3>
+
+            <ol class="steps">
+                <li><a href="#/step-16/#step1" id="step1">1</a></li>
+                <li><a href="#/step-16/#step2" id="step2">2</a></li>
+                <li><a href="#/step-16/#step3" id="step3">3</a></li>
+                <li><a href="#/step-16/#step4" id="step4">4</a></li>
+                <li><a href="#/step-16/#step5" id="step5">5</a></li>
+                <li><a href="#/step-16/#step6" id="step6">6</a></li>
+                <li><a href="#/step-16/#step7" id="step7">7</a></li>
+            </ol>
+
+            <ul class="legend">
+                <li id="cs"><a href="http://correspsearch.net/index.xql?l=de">correspSearch</a></li>
+                <li id="gnd"><a href="http://www.dnb.de/DE/Service/DigitaleDienste/LinkedData/linkeddata_node.html">GND</a></li>
+                <li id="geonames"><a href="http://www.geonames.org/ontology/documentation.html">Geonames</a></li>
             </ul>
+
+            <div id="model"></div>
+        </div>
+
+        <div class="step">
+            <h2>
+               Grundbegriffe
+            </h2>
+            <h3 class="red pull-up">
+               Bereitstellung von RDF
+            </h3>
+            <div class="mfp-lightbox center">
+               <p>Content Negotiation + RDFa</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>
+               Grundbegriffe
+            </h2>
+            <h3 class="red pull-up">
+               Serialisierungsformate von RDF
+            </h3>
+            <div class="mfp-lightbox center">
+               <p>RDF/XML, Turtle, JSON-LD</p>
+            </div>
         </div>
 
         <div class="step">
             <h1 class="red">02</h1>
             <h2 class="line-height-one-five">
-               Beispielmodellierungen
+               Modellieren
             </h2>
             <h3 class="red">
-                Mit CIDOC-CRM und einem Datensatz aus Epidat
+               Untertitel
             </h3>
         </div>
 
         <div class="step">
             <h2>Epigraphische Fachdaten</h2>
-            <h3 class="red">Epidat - Forschungsplattform für jüdische Grabsteinepigraphik</h3>
-            <div class="row" style="padding-top: 20px;">
+            <h3 class="red up-25">Epidat - Forschungsplattform für jüdische Grabsteinepigraphik</h3>
+            <div class="row">
                 <div class="seven columns">
                     <a href="http://www.steinheim-institut.de/cgi-bin/epidat" title="Epidat - Epigraphische Datenbank" style="border: none;">
                         <img src="resources/img/onlineapp-epidat.png" style="width: 100%" />
@@ -361,8 +486,8 @@ Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> 
          </div>
 
         <div class="step">
-            <h2 style="padding-top: 50px;">Beispielmodellierung 01</h2>
-            <h3 class="red">Grabstein 6 aus dem Epidat-Corpus Ahaus</h3>
+            <h2 class="down-50">Modellierung 1</h2>
+            <h3 class="red up-25">Grabstein 6 aus dem Epidat-Corpus Ahaus mit CIDOC-CRM</h3>
             <h5 style="margin: -10px 0; padding: 0; line-height: 1"><strong>Link:</strong>
                 <a href="http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-6">
                     Grabstein des Aharon ben Awraham Halevi (1872)
@@ -373,24 +498,24 @@ Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> 
                 </a>
             </h5>
 <pre>
-<code class="linenumbers xml"><div class="substep">    <span class="subject-color">&lt;aha-6&gt;</span>                <span class="predicate-color">a</span>                            <span class="object-color">E19_Physical_Object</span> .
-    <span class="subject-color">E19_Physical_Object</span>    <span class="predicate-color">P3_has_note</span>                  <span class="object-color">"Hochrechteckige Sandsteinstele [...]"</span> .
+<code class="linenumbers xml"><div class="substep"> <span class="subject-color">&lt;aha-6&gt;</span>                <span class="predicate-color">a</span>                            <span class="object-color">E19_Physical_Object</span> .
+ <span class="subject-color">E19_Physical_Object</span>    <span class="predicate-color">P3_has_note</span>                  <span class="object-color">"Hochrechteckige Sandsteinstele [...]"</span> .
 </div><div class="substep">
-    <span class="subject-color">&lt;aha-6&gt;</span>                <span class="predicate-color">P9_consists_of</span>               <span class="object-color">E57_Material</span> .
-    <span class="subject-color">E57_Material</span>           <span class="predicate-color">P3_has_note</span>                  <span class="object-color">"Stein"</span> .
+ <span class="subject-color">&lt;aha-6&gt;</span>                <span class="predicate-color">P9_consists_of</span>               <span class="object-color">E57_Material</span> .
+ <span class="subject-color">E57_Material</span>           <span class="predicate-color">P3_has_note</span>                  <span class="object-color">"Stein"</span> .
 </div><div class="substep">
-    <span class="subject-color">&lt;aha-6&gt;</span>                <span class="predicate-color">P78_is_identified_by</span>         <span class="object-color">E50_Date</span> .
-    <span class="subject-color">E50_Date</span>               <span class="predicate-color">P3_has_note</span>                  <span class="object-color">"1872-08-23"</span> .
+ <span class="subject-color">&lt;aha-6&gt;</span>                <span class="predicate-color">P78_is_identified_by</span>         <span class="object-color">E50_Date</span> .
+ <span class="subject-color">E50_Date</span>               <span class="predicate-color">P3_has_note</span>                  <span class="object-color">"1872-08-23"</span> .
 </div><div class="substep">
-    <span class="subject-color">&lt;aha-6&gt;</span>                <span class="predicate-color">P131i_identifies</span>             <span class="object-color">E21_Person</span> .
-    <span class="subject-color">E21_Person</span>             <span class="predicate-color">P131_is_identified_by</span>        <span class="object-color">E82_Actor_Appellation</span> .
-    <span class="subject-color">E82_Actor_Appellation</span>  <span class="predicate-color">P3_has_note</span>                  <span class="object-color">"Aharon ben Awraham Halevi"</span> .
+ <span class="subject-color">&lt;aha-6&gt;</span>                <span class="predicate-color">P131i_identifies</span>             <span class="object-color">E21_Person</span> .
+ <span class="subject-color">E21_Person</span>             <span class="predicate-color">P131_is_identified_by</span>        <span class="object-color">E82_Actor_Appellation</span> .
+ <span class="subject-color">E82_Actor_Appellation</span>  <span class="predicate-color">P3_has_note</span>                  <span class="object-color">"Aharon ben Awraham Halevi"</span> .
 </div><div class="substep">
-    <span class="subject-color">E21_Person</span>             <span class="predicate-color">P2_has_type</span>                  <span class="object-color">E55_Type</span> .
-    <span class="subject-color">E55_Type</span>               <span class="predicate-color">P3_has_note</span>                  <span class="object-color">"male"</span> .
+ <span class="subject-color">E21_Person</span>             <span class="predicate-color">P2_has_type</span>                  <span class="object-color">E55_Type</span> .
+ <span class="subject-color">E55_Type</span>               <span class="predicate-color">P3_has_note</span>                  <span class="object-color">"male"</span> .
 </div><div class="substep">
-    <span class="subject-color">E21_Person</span>             <span class="predicate-color">P100i_died_in</span>                <span class="object-color">E69_Death</span> .
-    <span class="subject-color">E69_Death</span>              <span class="predicate-color">P78_is_identified_by</span>         <span class="object-color">E50_Date</span> .
+ <span class="subject-color">E21_Person</span>             <span class="predicate-color">P100i_died_in</span>                <span class="object-color">E69_Death</span> .
+ <span class="subject-color">E69_Death</span>              <span class="predicate-color">P78_is_identified_by</span>         <span class="object-color">E50_Date</span> .
 </div>
 </code>
 </pre>
@@ -403,8 +528,8 @@ Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> 
         </div>
 
         <div class="step">
-            <h2 style="margin-top: -120px;">Beispielmodellierung 02</h2>
-            <h3 class="red">Schritt 1 - E19_Physical_Object</h3>
+            <h2>Modellierung 2 - Schritt 1</h2>
+            <h3 class="red up-25">Grabstein 13 aus dem Epidat Corpus</h3>
             <h5 style="margin: -10px 0 80px 0; padding: 0; line-height: 1"><strong>Link:</strong>
                 <a href="http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13">
                     Grabstein des Elieser und Jehuda ben Josef Hakohen (1879)
@@ -452,8 +577,8 @@ Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> 
         </div>
 
         <div class="step">
-            <h2 style="margin-top: -120px;">Beispielmodellierung 02</h2>
-            <h3 class="red">Schritt 2 - E57_Material</h3>
+            <h2>Modellierung 2 - Schritt 2</h2>
+            <h3 class="red up-25">Grabstein 13 aus dem Epidat Corpus</h3>
             <h5 style="margin: -10px 0 80px 0; padding: 0; line-height: 1"><strong>Link:</strong>
                 <a href="http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13">
                     Grabstein des Elieser und Jehuda ben Josef Hakohen (1879)
@@ -527,8 +652,8 @@ Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> 
         </div>
 
         <div class="step">
-            <h2 style="margin-top: -120px;">Beispielmodellierung 02</h2>
-            <h3 class="red">Schritt 3 - E50_Date</h3>
+            <h2>Modellierung 2 - Schritt 3</h2>
+            <h3 class="red up-25">Grabstein 13 aus dem Epidat Corpus</h3>
             <h5 style="margin: -10px 0 80px 0; padding: 0; line-height: 1"><strong>Link:</strong>
                 <a href="http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13">
                     Grabstein des Elieser und Jehuda ben Josef Hakohen (1879)
@@ -628,8 +753,8 @@ Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> 
         </div>
 
         <div class="step">
-            <h2 style="margin-top: -120px;">Beispielmodellierung 02</h2>
-            <h3 class="red">Schritt 4 - E21_Person</h3>
+            <h2>Modellierung 2 - Schritt 4</h2>
+            <h3 class="red up-25">Grabstein 13 aus dem Epidat Corpus</h3>
             <h5 style="margin: -10px 0 80px 0; padding: 0; line-height: 1"><strong>Link:</strong>
                 <a href="http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13">
                     Grabstein des Elieser und Jehuda ben Josef Hakohen (1879)
@@ -757,8 +882,8 @@ Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> 
         </div>
 
         <div class="step">
-            <h2 style="margin-top: -120px;">Beispielmodellierung 02</h2>
-            <h3 class="red">Schritt 5 - E55_Type</h3>
+            <h2>Modellierung 2 - Schritt 5</h2>
+            <h3 class="red up-25">Grabstein 13 aus dem Epidat Corpus</h3>
             <h5 style="margin: -10px 0 80px 0; padding: 0; line-height: 1"><strong>Link:</strong>
                 <a href="http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13">
                     Grabstein des Elieser und Jehuda ben Josef Hakohen (1879)
@@ -933,8 +1058,8 @@ Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> 
         </div>
 
         <div class="step">
-            <h2>Beispielmodellierung 02</h2>
-            <h3 class="red">Schritt 6 - Gesamtergebnis</h3>
+            <h2>Modellierung 2 - Schritt 6</h2>
+            <h3 class="red up-25">Grabstein 13 aus dem Epidat Corpus</h3>
             <h5 style="margin: -10px 0 80px 0; padding: 0; line-height: 1"><strong>Link:</strong>
                 <a href="http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13">
                     Grabstein des Elieser und Jehuda ben Josef Hakohen (1879)
@@ -1318,12 +1443,12 @@ Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> 
             <h2>
                 Gesamtergebnis
             </h2>
-            <h3 class="red">Grabsteinkorpus Ahaus</h3>
+            <h3 class="red up-25">Grabsteinkorpus Ahaus</h3>
             <div class="row mfp-lightbox">
                 <div class="six columns">
                     <h4>Statistik</h4>
-                    <p style="margin-bottom: -10px;"><strong>Triple insgesamt:</strong> 1536</p>
-                    <table class="small stats">
+                    <p class="small"><strong>Triple insgesamt:</strong> 1536</p>
+                    <table class="small stats line-height-one">
                         <thead>
                             <tr>
                                 <th class="col1">Klassen</th>
@@ -1359,7 +1484,7 @@ Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> 
                     <a href="resources/img/epidat-aha-graph.png" title="" class="no-border-bottom">
                         <img src="resources/img/epidat-aha-graph.png" class="dotted no-underline" alt="Screenshot" title="Result as visual RDF graph" style="width: 100%;" />
                     </a>
-                    <p>
+                    <p class="small">
                         <strong>Daten aufrufen:</strong>
                         <a href="https://digicademy.github.io/dariah-workshop2016-xtriples-cidoc/data/rdf/epidat_aha.rdf">RDF/XML</a> |
                         <a href="https://digicademy.github.io/dariah-workshop2016-xtriples-cidoc/data/svg/epidat_aha.svg">SVG</a> |
@@ -1371,7 +1496,7 @@ Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> 
 
         <div class="step">
             <h1 class="red">03</h1>
-            <h2 class="line-height-one-five">
+            <h2>
                Abfragen
             </h2>
             <h3 class="red">
@@ -1380,49 +1505,14 @@ Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> 
         </div>
 
         <div class="step">
+            <h1 class="red">04</h1>
             <h2>
-               SPARQL
+               Visualisieren
             </h2>
-            <h3 class="red">Beispielhafte Abfragen über den RDF4j Triple-Store</h3>
-            <div class="row centered">
-                <div class="eight columns">
-                    <img src="resources/img/sparql.png" alt="" title="Rekursives Akronym für S PARQL P rotocol A nd R DF Q uery L anguage." style="width: 100%" />
-                </div>
-                <div class="four columns">
-                   <table class="small stats">
-                        <thead>
-                            <tr>
-                                <th class="col1">Klassen</th>
-                                <th class="col2">Queries</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="col1">E19_Physical_Object</td>
-                                <td class="col2"><a href="data/sparql/E19_Physical_Object.rq">SPARQL</a></td>
-                            </tr>
-                            <tr>
-                                <td class="col1">E57_Material</td>
-                                <td class="col2"><a href="data/sparql/E57_Material.rq">SPARQL</a></td>
-                            </tr>
-                            <tr>
-                                <td class="col1">E82_Actor_Appellation</td>
-                                <td class="col2"><a href="data/sparql/E82_Actor_Appellation.rq">SPARQL</a></td>
-                            </tr>
-                            <tr>
-                                <td class="col1">E55_Type</td>
-                                <td class="col2"><a href="data/sparql/E55_Type.rq">SPARQL</a></td>
-                            </tr>
-                            <tr>
-                                <td class="col1">E69_Death</td>
-                                <td class="col2"><a href="data/sparql/E69_Death.rq">SPARQL</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <h5><strong>Link:</strong> <a href="https://rdf4j-iss.adwmainz.net/">https://rdf4j-iss.adwmainz.net/</a></h5>
-       </div>
+            <h3 class="red">
+               Bibliotheken für die Visualisierung von SPARQL Abfragen
+            </h3>
+        </div>
 
         <div class="step">
             <div class="centered">
@@ -1460,8 +1550,8 @@ Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> 
             <ul class="small pull-up">
                 <li>
                     Slides:
-                    <a href="https://slides-iss.adwmainz.net/semantik/">
-                        https://slides-iss.adwmainz.net/semantik/
+                    <a href="https://digicademy.github.io/2016-agehum-lodworkshop/">
+                        https://digicademy.github.io/2016-agehum-lodworkshop/
                     </a>
                 </li>
                 <li>
@@ -1500,6 +1590,9 @@ Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> 
     <!-- magnific popup -->
     <script src="vendor/magnific-popup/jquery.magnific-popup.min-1.1.0.js"></script>
     <script src="resources/js/magnific-popup.lightbox.js"></script>
+
+    <!-- greuler model -->
+    <script src="resources/js/model.js" type="text/javascript"></script>
 
     <!-- sgvizler -->
     <script src="vendor/sgvizler/sgvizler.fork.js"></script>

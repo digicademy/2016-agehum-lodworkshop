@@ -1,0 +1,20 @@
+# Briefe verschickt pro Stadt
+
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX tei:<http://www.tei-c.org/ns/1.0>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX owltime:<http://www.w3.org/2006/time#>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+PREFIX rel:<http://purl.org/vocab/relationship/>
+PREFIX place:<http://purl.org/ontology/places#>
+PREFIX gndo:<http://d-nb.info/standards/elementset/gnd#>
+PREFIX cd: <http://www.tei-c.org/ns/1.0/correspDesc#>
+
+SELECT DISTINCT ?place ?name (COUNT(?letter) AS ?count)
+WHERE {
+  	?letter cd:sentFrom ?place .
+  	?place rdfs:label ?name .
+}
+GROUP BY ?place ?name
+ORDER BY DESC(?count)

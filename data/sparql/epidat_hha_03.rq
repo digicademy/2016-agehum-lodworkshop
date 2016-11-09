@@ -1,0 +1,10 @@
+# Plain
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rel: <http://purl.org/vocab/relationship/>
+
+SELECT DISTINCT ?subject ?predicate ?object
+WHERE {
+	?subject ?predicate ?object .
+}

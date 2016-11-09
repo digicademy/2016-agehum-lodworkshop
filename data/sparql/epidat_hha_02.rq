@@ -1,0 +1,15 @@
+# Grandchildren
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rel: <http://purl.org/vocab/relationship/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?grandparent ?grandparentName ?child ?childName ?grandchild ?grandchildName
+WHERE {
+	?grandparent rel:parentOf ?child .
+  	?child rel:parentOf ?grandchild .
+    OPTIONAL { ?grandparent rdfs:label ?grandparentName }
+    OPTIONAL { ?child rdfs:label ?childName }
+    OPTIONAL { ?grandchild rdfs:label ?grandchildName }
+}

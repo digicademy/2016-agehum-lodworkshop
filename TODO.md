@@ -6,31 +6,34 @@
 ### Was wir uns anschauen
 
 + Grundlagen
+++ LOD als Basis für Nachnutzung
++++ Potentiale
++++ LOD Cloud
++++ Nachnutzungsaspekte
 ++ 5-Star LOD
 ++ URIs
 ++ Triple
 ++ Vokabulare, Ontologien
 ++ RDFS/OWL
-++ Serialisierungsformate
+++ Normdaten, Reasoning, Inferencing
+++ Bereitstellung von RDF
++++ Content Negotiation (Bsp. CVMA)
++++ RDFa (Bsp. MPK)
++++ => Beispiel CVMA Specs
+++ RDF-Serialisierungsformate
 +++ RDF/XML
 +++ Turtle
 +++ JSON-LD
-++ Reasoning, Inferencing
-++ LOD als Basis für Nachnutzung
-++ Wie kann RDF bereitgestellt werden
-+++ Content Negotiation (Bsp. CVMA)
-+++ RDFa (Bsp. MPK)
 
 + Modellieren
-++ Nützliche Vokabulare und Ontologien
-++ RDF-Generierung 
-+++ aus tabellarischen Daten
-+++ aus relationalen Datenbanken
-+++ aus XML
 ++ Modellierungsbeispiele
 +++ Epidat Ahaus => Familienbeziehungen
 +++ Epidat Ahaus => CIDOC-CRM
 +++ correspSearch => Briefnetzwerk
+++ RDF-Generierung 
++++ aus tabellarischen Daten
++++ aus relationalen Datenbanken
++++ aus XML
 
 + Analysieren
 ++ SPARQL-Grundlagen

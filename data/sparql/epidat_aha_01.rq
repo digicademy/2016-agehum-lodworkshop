@@ -1,12 +1,14 @@
+# E19_Physical_Object
+
 PREFIX epidat:<http://www.steinheim-institut.de/cgi-bin/epidat?id=>
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
 PREFIX crm:<http://erlangen-crm.org/160331/>
 
-SELECT ?name
+SELECT ?E19_Physical_Object
 WHERE {
-   ?E82_Actor_Appellation rdf:type <http://erlangen-crm.org/160331/E82_Actor_Appellation> .
-   ?E82_Actor_Appellation crm:P3_has_note ?name .
+   ?E19_Physical_Object rdf:type <http://erlangen-crm.org/160331/E19_Physical_Object> .
 }
-GROUP BY ?name
+GROUP BY ?E19_Physical_Object
+ORDER BY ?E19_Physical_Object
