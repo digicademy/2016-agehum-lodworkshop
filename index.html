@@ -136,7 +136,7 @@
 
         <div class="step">
             <h2>
-               Potentiale von LOD
+               Nachnutzungspotentiale
             </h2>
             <h3 class="red up-25">
                Semantische Verknüpfung und Analyse von Forschungsdaten
@@ -146,6 +146,28 @@
                     <img src="resources/img/linking-repositories.png" style="width: 80%; position: relative; left: 70px;" />
                 </a>
             </div>
+        </div>
+
+        <div class="step">
+            <h2>
+               Semantische Fragestellungen
+            </h2>
+            <h3 class="red up-25">Mögliche Analysen mit Hilfe von Semantic Web Technologien</h3>
+            <ul>
+                <li class="substep">
+                    Welche historischen Personen existieren in allen Repositorien in welchen spezifischen Kontexten?
+                </li>
+                <li class="substep">
+                    Welche kulturellen Objekte existieren zu welchen Zeiten in den verschiedenen Fachdatenkorpora?
+                </li>
+                <li class="substep">
+                    Können bestimmte Muster im Auftreten bestimmter historisch-kultureller Phänomene aus den Daten gefolgert werden?
+                </li>
+                <li class="substep">
+                    Auf Ebene der Metadaten: Welche geisteswissenschaftlichen Ressourcen beinhaltet ein Repositorium, wie sind diese
+                    strukturiert und in welcher Relation stehen sie zueinander?
+                </li>
+            </ul>
         </div>
 
         <div class="step">
@@ -171,11 +193,26 @@
                Nachnutzungsaspekte
             </h2>
             <h3 class="red up-25">
-               LOD als Nachnutzungsbasis für geisteswissenschaftliche Fachdaten
+               LOD als Nachnutzungsbasis für Fachdaten
             </h3>
-            <div class="mfp-lightbox center">
-                <p>Points</p>
-            </div>
+            <h4>Fachdaten und/oder Metadaten zu diesen Fachdaten<br/> als LOD bereitzustellen ermöglicht</h4>
+            <ul class="medium">
+                <li class="substep">
+                    ... es Dritten, meine digitalen Ressourcen zu finden.
+                </li>
+                <li class="substep">
+                    ... einen freien, strukturierten und maschinenlesbaren Zugriff (ggf. zu eigenen Analysezwecken).
+                </li>
+                <li class="substep">
+                    ... eine standardisierte Bereitstellung der Informationen nach W3C- und ISO-Standards.
+                </li>
+                <li class="substep">
+                    ... die Daten in einen größeren Kontext zu stellen und Datensilos somit aufzulösen.
+                </li>
+            </ul>
+            <p class="substep">
+                <strong>Und zwar ohne Kontrollverlust über die eigenen Daten und deren Qualität!</strong>
+            </p>
         </div>
 
         <div class="step">
@@ -310,39 +347,36 @@ scheme     authority       path        query fragment
         <div class="step">
 
             <h2>Grundbegriffe</h2>
-            <h3 class="red up-25">Vokabularien und Ontologien</h3>
+            <h3 class="red up-25">Vokabulare und Ontologien</h3>
             <div class="row">
                 <div class="eight columns">
                     <ul class="small line-height-one-five">
-                        <li class="substep">Ontologien in der Informatik modellieren <strong>Mengen von Begriffen (<em>concepts</em>)</strong> und deren <strong>jeweilige Beziehungen</strong> untereinander</li>
-                        <li class="substep">Über Ontologien können Informationsonzepte strukturiert beschrieben werden</li>
-                        <li class="substep">Geisteswissenschaftliche Informationskonzepte könnten bspw. sein:
+                        <li class="substep">Ontologien in der Informatik modellieren <strong>Begriffe bzw. Informationskonzepte</strong> und deren <strong>jeweilige Beziehungen</strong> untereinander</li>
+                        <li class="substep"><strong>Geisteswissenschaftliche Informationskonzepte</strong> können bspw. sein:
                             <ul>
                                 <li>Personen und deren Familienbeziehungen untereinander</li>
-                                <li>Historische Ereignisse</li>
-                                <li>Kunstwerke oder Artefakte, deren Enstehung und Eigenschaften</li>
+                                <li>Ereignisse und deren Auswirkungen</li>
+                                <li>Kunstwerke bzw. Artefakte, deren Enstehung und Eigenschaften</li>
                                 <li>... etc.</li>
                             </ul>
                         </li>
                         <li class="substep">
-                            Für die Geistes- und Kulturwissenschaften sind u.a. relevant:
+                            <strong>Hilfreiche Ontologien</strong> für die Geistes- und Kulturwissenschaften sind u.a.:
                             <ul>
                                 <li><a href="http://xmlns.com/foaf/spec/">FOAF</a> (Personen)</li>
                                 <li><a href="http://purl.org/vocab/relationship/">REL</a> (Beziehungen zwischen Personen)</li>
                                 <li><a href="http://vocab.org/bio/">BIO</a> (Eigenschaften von Personen)</li>
                                 <li><a href="http://www.cidoc-crm.org/cidoc-crm/">CIDOC-CRM</a> bzw. <a href="http://erlangen-crm.org/docs/ecrm/current/index.html">Erlangen-CRM</a> (Kulturelles Erbe)</li>
-                                <li>... und viele weitere: <a href="http://prefix.cc/">http://prefix.cc/</a> </li>
+                                <li>... und viele viele Weitere. <strong>Ontologien finden:</strong> <a href="http://prefix.cc/">http://prefix.cc/</a> </li>
                             </ul>
                         </li>
                     </ul>
                 </div>
                 <div class="four columns mfp-lightbox centered">
-                    <img src="resources/img/owl.png" alt="" title="" style="width: 60%;">
-                    <p class="small"><a href="http://www.semaweb.org/dokumente/w3/TR/2004/REC-owl-features-20040210-DE.html">OWL (Web Ontology Language)</a></p>
                     <a href="resources/img/concepts.jpg">
                         <img src="resources/img/concepts.jpg" alt="" title="" style="width: 60%;">
                     </a>
-                    <p class="small">Ontologien modellieren Konzepte</p>
+                    <p class="small">Vokabulare und Ontologien modellieren Konzepte</p>
                 </div>
             </div>
 
@@ -355,17 +389,39 @@ scheme     authority       path        query fragment
             <h3 class="red up-25">RDFS &amp; OWL</h3>
             <div class="row">
                 <div class="eight columns">
-                    <ul class="small line-height-one-five">
+                    <ul class="x-small line-height-one-five">
                         <li class="substep">
-                            RDFS Definition
+                            RDF legt nur ein gemeinsames Modell bzw. eine Syntax für den Datenaustausch fest.
+                            Zur (maschinellen) Interpretation bzw. <strong>formalen Beschreibung</strong> der in RDF getroffenen
+                            Aussagen werden Vokabulare benötigt. Nur dadurch wird eine maschinelle Auswertbarkeit
+                            möglich.
                         </li>
                         <li class="substep">
-                            OWL Definition
+                            RDF-Schema (RDFS) stellt ein Vokabular zur Verfügung, mit dem die in einer Fachdomäne vorkommenden
+                            <strong>Begriffe und deren Eigenschaften und Relationen</strong> modelliert werden können. Mit RDFS lassen sich
+                            einfache Ontologien realisieren.
+                        </li>
+                        <li class="substep">
+                            Enthält ein Vokabular gleichzeitig auch <strong>Regeln für die richtige Verwendung</strong> der in ihm
+                            definierten Begriffe spricht man von einer Ontologie.
+                        </li>
+                        <li class="substep">
+                            Komplexe Ontologien benötigen eine formale Beschreibungssprache, die ausdrucksmächtiger ist als
+                            RDF-Schema. Hierfür existiert die <strong>Web Ontology Language (OWL)</strong> des W3C.
+                        </li>
+                        <li class="substep">
+                            Durch die Verwendung von OWL innerhalb einer Ontologie wird es möglich, <strong>logische Schlussfolgerungen</strong>
+                            auf den Daten auszuführen, die mit dieser Ontologie arbeiten. Hierbei gilt die <strong>Open World Assumption</strong>:
+                            <em>Ein "Reasoner" nimmt an, dass etwas existiert, solange nicht explizit definiert wurde, dass es nicht existiert.</em>
                         </li>
                     </ul>
                 </div>
                 <div class="four columns mfp-lightbox centered">
-                    Skizze "Klassen (classes) und Eigenschaften (properties)"
+                    <img src="resources/img/owl.png" alt="" title="" style="width: 60%;" />
+                    <p class="small">
+                        <a href="http://www.semaweb.org/dokumente/w3/TR/2004/REC-owl-features-20040210-DE.html">OWL (Web Ontology Language)</a>
+                    </p>
+                    <img class="substep down-75" src="resources/img/ows.png" alt="" title="" />
                 </div>
             </div>
         </div>
@@ -379,18 +435,6 @@ scheme     authority       path        query fragment
             <div class="row">
                 <div class="twelfe columns">
                     <p>correspDesc.ttl step by step</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="step">
-            <h2>
-              Beispiel »CIDOC-CRM«
-            </h2>
-            <h3 class="red up-25">Eine große Ontologie für Objekte des kulturellen Erbes</h3>
-            <div class="row">
-                <div class="twelfe columns">
-                    <p>CIDOC Klassendiagramm</p>
                 </div>
             </div>
         </div>
@@ -417,6 +461,18 @@ scheme     authority       path        query fragment
             </ul>
 
             <div id="model"></div>
+        </div>
+
+        <div class="step">
+            <h2>
+              Beispiel »CIDOC-CRM«
+            </h2>
+            <h3 class="red up-25">Eine große Ontologie für Objekte des kulturellen Erbes</h3>
+            <div class="row">
+                <div class="twelfe columns">
+                    <p>CIDOC Klassendiagramm</p>
+                </div>
+            </div>
         </div>
 
         <div class="step">
