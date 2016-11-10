@@ -85,3 +85,15 @@
 #geonames:before {
 	color: #4CAF50
 }
+
+#step-17 .CodeMirror {
+	font-size: 16px;
+	line-height: 1.5;
+	height: 540px;
+}
+
+#step-18 .CodeMirror {
+	font-size: 14px;
+	line-height: 1.5;
+	height: 500px;
+}

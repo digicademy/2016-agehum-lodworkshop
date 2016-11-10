@@ -225,7 +225,7 @@ li {
 
 li:before {
 	position: relative;
-	margin-left: -0.5em;
+	margin-left: -0.7em;
 	left: -0.5em;
 	color: #C00000;
 }
@@ -239,6 +239,7 @@ ul li:before {
 }
 
 ol li:before {
+	margin-left: -1em;
 	content: counters(section,".")".";
 }
 

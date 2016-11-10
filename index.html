@@ -248,6 +248,35 @@
         </div>
 
         <div class="step">
+            <h2 class="down-50">
+              Projektbeispiel
+            </h2>
+            <h3 class="red up-25">Corpus Vitrearum Medii Aevi</h3>
+            <div class="row up-25 mfp-lightbox">
+                <div class="six columns centered">
+                    <a href="resources/img/cvma-01.png">
+                        <img src="resources/img/cvma-01.png" style="width: 70%;" />
+                    </a>
+                    <p class="x-small"><a href="http://www.corpusvitrearum.de/">Startseite des CVMA</a></p>
+                    <a href="resources/img/cvma-03.png">
+                        <img src="resources/img/cvma-03.png" style="width: 70%;" />
+                    </a>
+                    <p class="x-small"><a href="http://www.corpusvitrearum.de/cvma-digital/normdaten/standorte.html">Standortliste</a></p>
+                </div>
+                <div class="six columns centered">
+                    <a href="resources/img/cvma-02.png">
+                        <img src="resources/img/cvma-02.png" style="width: 70%;"/>
+                    </a>
+                    <p class="x-small"><a href="http://www.corpusvitrearum.de/cvma-digital/spezifikationen/cvma-xmp/1.1.html">Metadatenspezifikation</a></p>
+                    <a href="resources/img/cvma-04.png">
+                        <img src="resources/img/cvma-04.png" style="width: 70%;"/>
+                    </a>
+                    <p class="x-small"><a href="http://id.corpusvitrearum.de/images/2460.xmp">Bildmetadaten</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
             <h2>
               Grundlagen
             </h2>
@@ -427,16 +456,121 @@ scheme     authority       path        query fragment
         </div>
 
         <div class="step">
-            <h2>
+            <h2 class="down-25">
               Beispiel »corresp«
             </h2>
-            <h3 class="red up-25">Eine kleine Ontologie für Briefkorrespondenzen</h3>
-            <h5>Modelliert auf Basis des &lt;correspDesc&gt; Moduls der TEI</h5>
+            <h3 class="red up-25">Eine kleine Ontologie für Briefkorrespondenzen nach TEI/CMI</h3>
+            <h4>CMI Ausgangsbasis</h4>
+<pre><code class="xml linenumbers">&lt;correspDesc key="686" cs:source="#SOE20"&gt;
+    &lt;correspAction type="sent"&gt;
+        &lt;persName ref="http://d-nb.info/gnd/118540238"&gt;
+            Johann Wolfgang von Goethe
+        &lt;/persName&gt;
+        &lt;placeName ref="http://www.geonames.org/2812482"&gt;
+            Weimar
+        &lt;/placeName&gt;
+        &lt;date when="1793-12-05"&gt;5.12.1793&lt;/date&gt;
+    &lt;/correspAction&gt;
+&lt;/correspDesc&gt;
+</code></pre>
+        </div>
+
+        <div class="step">
+            <h2 class="down-25">
+              Beispiel »corresp«
+            </h2>
+            <h3 class="red up-25">Eine Mini-Ontologie für Briefkorrespondenzen nach TEI/CMI</h3>
+            <h4 style="margin-top: -14px;">
+                 Eingebundene Vokabulare und Klassendefinitionen (classes)
+            </h4>
+<form><textarea id="corresp-1" name="correps-1">
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+@prefix time: &lt;http://www.w3.org/2006/time#&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix geo: &lt;https://www.w3.org/2003/01/geo/wgs84_pos#&gt; .
+@prefix corresp: &lt;https://lod.academy/correspDesc/vocab/&gt; .
+
+corresp:Letter a rdfs:Class ;
+    rdfs:subClassOf time:Instant ;
+    rdfs:label "Letter" .
+
+corresp:Recipient a rdfs:Class ;
+    rdfs:subClassOf foaf:Person ;
+    rdfs:comment "A person who receives a letter" ;
+    rdfs:label "Recipient" .
+
+corresp:Sender a rdfs:Class ;
+    rdfs:subClassOf foaf:Person ;
+    rdfs:comment "A person who sends a letter" ;
+    rdfs:label "Sender" .</textarea></form>
+            <p class="x-small" style="margin-top: -14px;">
+                Datei: <a href="data/ttl/corresp.ttl">corresp.ttl</a>
+            </p>
+        </div>
+
+        <div class="step">
+            <h2 class="down-25">
+              Beispiel »corresp«
+            </h2>
+            <h3 class="red up-25">Eine Mini-Ontologie für Briefkorrespondenzen nach TEI/CMI</h3>
+            <h4 style="margin-top: -14px;">
+                 Definition der Eigenschaften (properties)
+            </h4>
             <div class="row">
-                <div class="twelfe columns">
-                    <p>correspDesc.ttl step by step</p>
+                <div class="six columns">
+<form><textarea id="corresp-2" name="corresp-2">
+corresp:received a rdf:Property ;
+    rdfs:domain cd:Recipient ;
+    rdfs:range cd:Letter ;
+    rdfs:comment "The act of receiving a letter" ;
+    rdfs:label "receiving" .
+
+corresp:sent a rdf:Property ;
+    rdfs:domain cd:Sender ;
+    rdfs:range cd:Letter ;
+    rdfs:comment "The act of sending a letter" ;
+    rdfs:label "sending" ;
+    owl:inverseOf cd:receiving .
+
+corresp:communicating a rdf:Property ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Person ;
+    owl:sameAs cd:receiving , cd:sending .
+
+corresp:sentFrom a rdf:Property ;
+    rdfs:domain cd:Letter ;
+    rdfs:range geo:SpatialThing ;
+    rdfs:comment "A letter is sent from a place" ;
+    rdfs:label "sent from" .</textarea></form>
+                </div>
+                <div class="six columns">
+<form><textarea id="corresp-3" name="corresp-3">
+corresp:sentTo a rdf:Property ;
+    rdfs:domain cd:Letter ;
+    rdfs:range geo:SpatialThing ;
+    rdfs:comment "A letter is sent to a place" ;
+    rdfs:label "sent to" ;
+    owl:inverseOf cd:sentFrom .
+
+corresp:dateSent a rdf:Property ;
+    rdfs:subPropertyOf time:inXSDDateTime ;
+    rdfs:domain cd:Letter ;
+    rdfs:range xsd:dateTime .
+
+corresp:dateReceived a rdf:Property ;
+    rdfs:subPropertyOf time:inXSDDateTime ;
+    rdfs:domain cd:Letter ;
+    rdfs:range xsd:dateTime ;
+    owl:inverseOf cd:dateSent .</textarea></form>
                 </div>
             </div>
+
+            <p class="x-small up-25">
+                Datei: <a href="data/ttl/corresp.ttl">corresp.ttl</a>
+            </p>
         </div>
 
         <div class="step">
@@ -445,13 +579,13 @@ scheme     authority       path        query fragment
             <h3 class="red up-25">Normdaten, Reasoning</h3>
 
             <ol class="steps">
-                <li><a href="#/step-16/#step1" id="step1">1</a></li>
-                <li><a href="#/step-16/#step2" id="step2">2</a></li>
-                <li><a href="#/step-16/#step3" id="step3">3</a></li>
-                <li><a href="#/step-16/#step4" id="step4">4</a></li>
-                <li><a href="#/step-16/#step5" id="step5">5</a></li>
-                <li><a href="#/step-16/#step6" id="step6">6</a></li>
-                <li><a href="#/step-16/#step7" id="step7">7</a></li>
+                <li><a href="#/step-19/#step1" id="step1">1</a></li>
+                <li><a href="#/step-19/#step2" id="step2">2</a></li>
+                <li><a href="#/step-19/#step3" id="step3">3</a></li>
+                <li><a href="#/step-19/#step4" id="step4">4</a></li>
+                <li><a href="#/step-19/#step5" id="step5">5</a></li>
+                <li><a href="#/step-19/#step6" id="step6">6</a></li>
+                <li><a href="#/step-19/#step7" id="step7">7</a></li>
             </ol>
 
             <ul class="legend">
@@ -467,36 +601,69 @@ scheme     authority       path        query fragment
             <h2>
               Beispiel »CIDOC-CRM«
             </h2>
-            <h3 class="red up-25">Eine große Ontologie für Objekte des kulturellen Erbes</h3>
-            <div class="row">
-                <div class="twelfe columns">
-                    <p>CIDOC Klassendiagramm</p>
-                </div>
+            <h3 class="red up-25">Eine Maxi-Ontologie für Objekte des kulturellen Erbes</h3>
+            <div class="down-35 mfp-lightbox center">
+                <a href="resources/img/cidoc.png">
+                    <img src="resources/img/cidoc.png" style="width: 80%;" />
+                </a>
             </div>
+            <p class="medium">Übung: CIDOC-CRM lesen lernen <a href="http://erlangen-crm.org/docs/ecrm/current/index.html">mit der Erlangen-CRM Dokumentation</a></p>
         </div>
 
         <div class="step">
             <h2>
-               Grundbegriffe
-            </h2>
-            <h3 class="red pull-up">
                Bereitstellung von RDF
-            </h3>
+            </h2>
             <div class="mfp-lightbox center">
-               <p>Content Negotiation + RDFa</p>
+                <a href="resources/img/content-negotiation.png">
+                    <img src="resources/img/content-negotiation.png" />
+                </a>
             </div>
         </div>
 
         <div class="step">
-            <h2>
-               Grundbegriffe
+            <h2 class="down-25">
+                Bereitstellung von RDF
             </h2>
-            <h3 class="red pull-up">
-               Serialisierungsformate von RDF
-            </h3>
-            <div class="mfp-lightbox center">
-               <p>RDF/XML, Turtle, JSON-LD</p>
-            </div>
+            <h3 class="red up-25">Per RDFa eingebettet in HTML</h3>
+<pre>
+<code class="xml" style="font-size: 14px; line-height: 1.2;">&lt;div <span class="highlight">typeof="Person" vocab="http://schema.org/"</span> class="row"&gt;
+    &lt;h1&gt;&lt;span class="given-name" <span class="highlight">property="givenName"</span>&gt;Karl &lt;/span&gt;
+        &lt;span class="family-name" <span class="highlight">property="familyName"</span>&gt;Bechert&lt;/span&gt;
+    &lt;/h1&gt;
+    &lt;p&gt;Geb. &lt;time datetime="1901-08-23" <span class="highlight">property="birthDate"</span>&gt;23.08.1901&lt;/time&gt;
+       in &lt;span <span class="highlight">typeof="Place" property="birthPlace"</span>&gt;Nürnberg&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;p&gt;Gest. &lt;time datetime="1981-04-01" <span class="highlight">property="deathDate"</span>&gt;01.04.1981&lt;/time&gt;
+       in &lt;span <span class="highlight">typeof="Place" property="deathPlace"</span>&gt;Weilmünster-Möttau&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;p&gt;&lt;span class="gnd"&gt;GND:
+    &lt;a href="http://d-nb.info/gnd/119127059" <span class="highlight">property="sameAs"</span>&gt;119127059&lt;/a&gt;;
+    VIAF: &lt;a href="http://viaf.org/viaf/32323656" <span class="highlight">property="sameAs"</span>&gt;32323656&lt;/a&gt;&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li <span class="highlight">property="performerIn" typeof="Event"</span>&gt;
+            &lt;span <span class="highlight">property="name"</span>&gt;
+                &lt;time <span class="highlight">property="startDate" datetime="1946-01-01"</span> class="skip"&gt;1946-01-01&lt;/time&gt;
+                &lt;time <span class="highlight">property="endDate" datetime="1969-12-31"</span> class="skip"&gt;1969-12-31&lt;/time&gt;
+                1946-1969, Professor für Theoretische Physik, Naturwissenschaftliche Fakultät
+            &lt;/span&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    [...]
+&lt;/div&gt;
+</code>
+</pre>
+                <p class="x-small up-50">
+                    Beispiel »Karl Bechert« aus dem <a href="http://gutenberg-biographics.ub.uni-mainz.de/home.html">Mainzer Professorenkatalog</a>
+                    Google Test-Tool: <a href="https://search.google.com/structured-data/testing-tool#url=http%3A%2F%2Fgutenberg-biographics.ub.uni-mainz.de%2Fpersonen%2Fregister%2Feintrag%2Fkarl-bechert.html">Demo</a> |
+                    GetSchema.org Parser: <a href="http://getschema.org/rdfaliteextractor?url=http%3A%2F%2Fgutenberg-biographics.ub.uni-mainz.de%2Fpersonen%2Fregister%2Feintrag%2Fkarl-bechert.html&out=rdf">Demo</a>
+                </p>
+                <ul class="x-small">
+                    <li>Einfach umzusetzende maschinenlesbare Datenanreicherung</li>
+                    <li>Daten können direkt aus den HTML-Frontends abgegriffen und umgewandelt (bspw. in JSON-LD) werden</li>
+                    <li>Steigert gleichzeitig die Suchmaschinenoptimierung der Kataloge</li>
+                </ul>
         </div>
 
         <div class="step">
@@ -505,7 +672,7 @@ scheme     authority       path        query fragment
                Modellieren
             </h2>
             <h3 class="red">
-               Untertitel
+               Beispiele aus dem Projektumfeld der Digitalen Akademie
             </h3>
         </div>
 
@@ -1630,7 +1797,23 @@ scheme     authority       path        query fragment
     <script src="vendor/codemirror/addon/edit/matchbrackets.js"></script>
     <script src="vendor/codemirror/mode/sparql/sparql.js"></script>
     <script>
-        var editor = CodeMirror.fromTextArea(document.getElementById("sparql"), {
+        var editor = CodeMirror.fromTextArea(document.getElementById("corresp-1"), {
+            mode: "application/sparql-query",
+            matchBrackets: true,
+            lineNumbers: true,
+            viewportMargin: Infinity
+        });
+    </script>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("corresp-2"), {
+            mode: "application/sparql-query",
+            matchBrackets: true,
+            lineNumbers: true,
+            viewportMargin: Infinity
+        });
+    </script>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("corresp-3"), {
             mode: "application/sparql-query",
             matchBrackets: true,
             lineNumbers: true,
