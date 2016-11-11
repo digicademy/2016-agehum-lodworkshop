@@ -6,7 +6,7 @@ var instance = greuler({
   avoidOverlaps: true,
   data: {
     nodes: [
-      {id: 1, x: 100, y: 430, r: 50, fixed: true, label: 'Goethe', topRightLabel: 'corresp:Sender'}
+      {id: 1, x: 100, y: 430, r: 50, fixed: true, label: 'Goethe', topRightLabel: 'cmi:Sender'}
     ],
     links: []
   }
@@ -15,8 +15,8 @@ var instance = greuler({
 $(function() {
     $("#step1").click(function() {
         if ($(".current").length < 1) {
-            instance.graph.addNode({id: 2, x: 350, y: 430, r: 50, fixed: true, fill: '#F44336', label: 'Brief', topRightLabel: 'corresp:Letter'});
-            instance.graph.addEdge({source: 1, target: 2, weight: 'corresp:sent'});
+            instance.graph.addNode({id: 2, x: 350, y: 430, r: 50, fixed: true, fill: '#F44336', label: 'Brief', topRightLabel: 'cmi:Letter'});
+            instance.graph.addEdge({source: 1, target: 2, weight: 'cmi:sent'});
             instance.update();
             $(this).addClass('current');
         }
@@ -24,8 +24,8 @@ $(function() {
     $("#step2").click(function() {
         var current = $(".current").length;
         if (current > 0 && current < 2) {
-            instance.graph.addNode({id: 11, x: 350, y: 50, r: 30, fixed: true, fill: '#F44336', label: '1793'});
-            instance.graph.addEdge({source: 2, target: 11, weight: 'corresp:dateSent'});
+            instance.graph.addNode({id: 11, x: 350, y: 50, r: 30, fixed: true, fill: '#F44336', label: '1814'});
+            instance.graph.addEdge({source: 2, target: 11, weight: 'cmi:dateSent'});
             instance.update();
             $(this).addClass('current');
         }
@@ -33,8 +33,8 @@ $(function() {
     $("#step3").click(function() {
         var current = $(".current").length;
         if (current > 1 && current < 3) {
-            instance.graph.addNode({id: 3, x: 600, y: 430, r: 50, fixed: true, label: 'Soemmering', topRightLabel: 'corresp:Recipient'});
-            instance.graph.addEdge({source: 2, target: 3, weight: 'corresp:received'});
+            instance.graph.addNode({id: 3, x: 600, y: 430, r: 50, fixed: true, label: 'Riemer', topRightLabel: 'cmi:Recipient'});
+            instance.graph.addEdge({source: 2, target: 3, weight: 'cmi:received'});
             instance.update();
             $(this).addClass('current');
         }
@@ -42,10 +42,10 @@ $(function() {
     $("#step4").click(function() {
         var current = $(".current").length;
         if (current > 2 && current < 4) {
-            instance.graph.addNode({id: 4, x: 100, y: 180, r: 50, fixed: true, fill: '#4CAF50', label: 'Weimar', topRightLabel: 'geo:SpatialThing'});
-            instance.graph.addEdge({source: 2, target: 4, weight: 'corresp:sentFrom'});
-            instance.graph.addNode({id: 5, x: 600, y: 180, r: 50, fixed: true, fill: '#4CAF50', label: 'Mainz', topRightLabel: 'geo:SpatialThing'});
-            instance.graph.addEdge({source: 2, target: 5, weight: 'corresp:sentTo'});
+            instance.graph.addNode({id: 4, x: 100, y: 180, r: 50, fixed: true, fill: '#4CAF50', label: 'Wiesbaden', topRightLabel: 'geo:SpatialThing'});
+            instance.graph.addEdge({source: 2, target: 4, weight: 'cmi:sentFrom'});
+            instance.graph.addNode({id: 5, x: 600, y: 180, r: 50, fixed: true, fill: '#4CAF50', label: 'Weimar', topRightLabel: 'geo:SpatialThing'});
+            instance.graph.addEdge({source: 2, target: 5, weight: 'cmi:sentTo'});
             instance.update();
             $(this).addClass('current');
         }
@@ -53,13 +53,13 @@ $(function() {
     $("#step5").click(function() {
         var current = $(".current").length;
         if (current > 3 && current < 5) {
-            instance.graph.addNode({id: 6, x: 50, y: 50, r: 30, fixed: true, fill: '#4CAF50', label: '50.98'});
+            instance.graph.addNode({id: 6, x: 50, y: 50, r: 30, fixed: true, fill: '#4CAF50', label: '50.08'});
             instance.graph.addEdge({source: 4, target: 6, weight: 'geo:lat'});
-            instance.graph.addNode({id: 7, x: 150, y: 50, r: 30, fixed: true, fill: '#4CAF50', label: '11.32'});
+            instance.graph.addNode({id: 7, x: 150, y: 50, r: 30, fixed: true, fill: '#4CAF50', label: '8.24'});
             instance.graph.addEdge({source: 4, target: 7, weight: 'geo:long'});
-            instance.graph.addNode({id: 8, x: 550, y: 50, r: 30, fixed: true, fill: '#4CAF50', label: '49.96'});
+            instance.graph.addNode({id: 8, x: 550, y: 50, r: 30, fixed: true, fill: '#4CAF50', label: '50.98'});
             instance.graph.addEdge({source: 5, target: 8, weight: 'geo:lat'});
-            instance.graph.addNode({id: 9, x: 650, y: 50, r: 30, fixed: true, fill: '#4CAF50', label: '8.24'});
+            instance.graph.addNode({id: 9, x: 650, y: 50, r: 30, fixed: true, fill: '#4CAF50', label: '11.32'});
             instance.graph.addEdge({source: 5, target: 9, weight: 'geo:long'});
             instance.update();
             $(this).addClass('current');
@@ -96,7 +96,7 @@ $(function() {
                     };
                 };
                 yield function () {
-                    instance.graph.addEdge({source: 1, target: 4, weight: 'was 1793 in', stroke: '#E74C3C'});
+                    instance.graph.addEdge({source: 1, target: 4, weight: 'was 1814 in', stroke: '#E74C3C'});
                     instance.update();
                 };
                 yield function () {

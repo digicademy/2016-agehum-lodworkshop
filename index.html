@@ -183,7 +183,7 @@
                 </a>
                 <p class="small">
                     Quelle: Linking Open Data cloud diagram 2014, by Max Schmachtenberg, Christian Bizer,
-                    Anja Jentzsch and Richard Cyganiak. <a href="http://lod-cloud.net/">http://lod-cloud.net/</a>
+                    Anja Jentzsch and Richard Cyganiak. <a href="https://lod-cloud.net/">https://lod-cloud.net/</a>
                 </p>
             </div>
         </div>
@@ -304,39 +304,17 @@
             <h2>
                Grundbegriffe
             </h2>
-            <h3 class="red">URI</h3>
-
-<pre class="code-example">
-<code class="markdown">  foo://example.com:8042/over/there?name=duck#beak
-  \_/   \______________/\_________/ \_______/ \__/
-   |           |            |            |      |
-scheme     authority       path        query fragment
-</code></pre>
-            <p class="medium">
-                Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> aus fünf Teilen:
-                <code>scheme</code> (Schema oder Protokoll), <code>authority</code> (Anbieter oder Server),
-                 <code>path</code> (Pfad), <code>query</code> (Abfrage) und <code>fragment</code> (Teil).
-                 Nur <strong>scheme, authority und path</strong> müssen in jedem URI vorkommen.
-            </p>
-            <h4>Berners-Lee: <a href="https://www.w3.org/Provider/Style/URI.html"><em>Cool URIs don't change</em></a>!</h4>
-
-        </div>
-
-        <div class="step">
-            <h2>
-               Grundbegriffe
-            </h2>
             <h3 class="red">Triple (Prinzip)</h3>
 <pre class="pull-25">
 <code class="xml">   <span class="subject-color">&lt;Goethe&gt;</span>          <span class="predicate-color">&lt;a&gt;</span>                 <span class="object-color">&lt;Sender&gt;</span> ;
                      <span class="predicate-color">&lt;sent&gt;</span>              <span class="object-color">&lt;Letter&gt;</span> .
 
-   <span class="subject-color">&lt;Letter&gt;</span>          <span class="predicate-color">&lt;dateSent&gt;</span>          <span class="object-color">"1793"</span> ;
-                     <span class="predicate-color">&lt;sentFrom&gt;</span>          <span class="object-color">&lt;Weimar&gt;</span> .
+   <span class="subject-color">&lt;Letter&gt;</span>          <span class="predicate-color">&lt;dateSent&gt;</span>          <span class="object-color">"1814"</span> ;
+                     <span class="predicate-color">&lt;sentFrom&gt;</span>          <span class="object-color">&lt;Wiesbaden&gt;</span> .
 
-   <span class="subject-color">&lt;Weimar&gt;</span>          <span class="predicate-color">&lt;a&gt;</span>                 <span class="object-color">&lt;City&gt;</span> ;
-                     <span class="predicate-color">&lt;lat&gt;</span>               <span class="object-color">"50.98"</span> ;
-                     <span class="predicate-color">&lt;long&gt;</span>              <span class="object-color">"11.32"</span> .
+   <span class="subject-color">&lt;Wiesbaden&gt;</span>       <span class="predicate-color">&lt;a&gt;</span>                 <span class="object-color">&lt;SpatialThing&gt;</span> ;
+                     <span class="predicate-color">&lt;lat&gt;</span>               <span class="object-color">"50.08"</span> ;
+                     <span class="predicate-color">&lt;long&gt;</span>              <span class="object-color">"8.24"</span> .
 </code>
 </pre>
 
@@ -354,15 +332,15 @@ scheme     authority       path        query fragment
             </h2>
             <h3 class="red">Triple (Turtle/RDF)</h3>
 <pre class="pull-25" style="width: 108%;">
-<code class="xml" style="font-size: 13px; padding-left: 0;">   <span class="subject-color">&lt;http://d-nb.info/gnd/118540238&gt;</span> <span class="predicate-color">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt;</span> <span class="object-color">&lt;http://lod.academy/correspDesc/vocab/#Sender&gt;</span> ;
-                                   <span class="predicate-color">&lt;http://lod.academy/correspDesc/vocab/#sent&gt;</span>      <span class="object-color">&lt;http://lod.academy/correspDesc/vocab/#Letter&gt;</span> .
+<code class="xml" style="font-size: 13px; padding-left: 0;">   <span class="subject-color">&lt;http://d-nb.info/gnd/118540238&gt;</span> <span class="predicate-color">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt;</span> <span class="object-color">&lt;https://lod.academy/cmi/vocab/#Sender&gt;</span> ;
+                                    <span class="predicate-color">&lt;https://lod.academy/cmi/vocab/#sent&gt;</span>             <span class="object-color">&lt;http://www.weber-gesamtausgabe.de/A040654&gt;</span> .
 
-   <span class="subject-color">&lt;http://lod.academy/correspDesc/vocab/#Letter&gt;</span> <span class="predicate-color">&lt;http://lod.academy/correspDesc/vocab/#dateSent&gt;</span> <span class="object-color">"1793"</span> ;
-                                                   <span class="predicate-color">&lt;http://lod.academy/correspDesc/vocab/#sentFrom&gt;</span> <span class="object-color">&lt;http://www.geonames.org/2812482&gt;</span> .
+   <span class="subject-color">&lt;http://www.weber-gesamtausgabe.de/A040654&gt;</span> <span class="predicate-color">&lt;https://lod.academy/cmi/vocab/#dateSent&gt;</span> <span class="object-color">"1814"</span> ;
+                                               <span class="predicate-color">&lt;https://lod.academy/cmi/vocab/#sentFrom&gt;</span> <span class="object-color">&lt;http://www.geonames.org/2809346&gt;</span> .
 
-   <span class="subject-color">&lt;http://www.geonames.org/2812482&gt;</span> <span class="predicate-color">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt;</span> <span class="object-color">&lt;https://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing&gt;</span> ;
-                                     <span class="predicate-color">&lt;https://www.w3.org/2003/01/geo/wgs84_pos#lat&gt;</span>    <span class="object-color">"50.98"</span> ;
-                                     <span class="predicate-color">&lt;https://www.w3.org/2003/01/geo/wgs84_pos#long&gt;</span>   <span class="object-color">"11.32"</span> .
+   <span class="subject-color">&lt;http://www.geonames.org/2809346&gt;</span> <span class="predicate-color">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt;</span> <span class="object-color">&lt;https://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing&gt;</span> ;
+                                     <span class="predicate-color">&lt;https://www.w3.org/2003/01/geo/wgs84_pos#lat&gt;</span>    <span class="object-color">"50.08"</span> ;
+                                     <span class="predicate-color">&lt;https://www.w3.org/2003/01/geo/wgs84_pos#long&gt;</span>   <span class="object-color">"8.24"</span> .
 </code>
 </pre>
 
@@ -371,6 +349,27 @@ scheme     authority       path        query fragment
                 <li class="predicate">Prädikat</li>
                 <li class="object">Objekt</li>
             </ul>
+        </div>
+
+        <div class="step">
+            <h2>
+               Grundbegriffe
+            </h2>
+            <h3 class="red">URI</h3>
+
+<pre class="code-example">
+<code class="markdown">  foo://example.com:8042/over/there?name=duck#beak
+  \_/   \______________/\_________/ \_______/ \__/
+   |           |            |            |      |
+scheme     authority       path        query fragment
+</code></pre>
+            <p class="medium">
+                Ein URI besteht nach <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> aus fünf Teilen:
+                <code>scheme</code> (Schema oder Protokoll), <code>authority</code> (Anbieter oder Server),
+                 <code>path</code> (Pfad), <code>query</code> (Abfrage) und <code>fragment</code> (Teil).
+                 Nur <strong>scheme, authority und path</strong> müssen in jedem URI vorkommen.
+            </p>
+            <h4>Berners-Lee: <a href="https://www.w3.org/Provider/Style/URI.html"><em>Cool URIs don't change</em></a>!</h4>
         </div>
 
         <div class="step">
@@ -457,33 +456,34 @@ scheme     authority       path        query fragment
 
         <div class="step">
             <h2 class="down-25">
-              Beispiel »corresp«
+              Beispiel »cmi«
             </h2>
-            <h3 class="red up-25">Eine kleine Ontologie für Briefkorrespondenzen nach TEI/CMI</h3>
-            <h4>CMI Ausgangsbasis</h4>
-<pre><code class="xml linenumbers">&lt;correspDesc key="686" cs:source="#SOE20"&gt;
+            <h3 class="red up-25">Eine Mini-Ontologie für Briefkorrespondenzen nach TEI/CMI</h3>
+            <h4>CMI Ausgangsbasis:</h4>
+<pre><code class="xml linenumbers">&lt;correspDesc cs:source="#WEGA" ref="http://www.weber-gesamtausgabe.de/A040654"&gt;
     &lt;correspAction type="sent"&gt;
-        &lt;persName ref="http://d-nb.info/gnd/118540238"&gt;
-            Johann Wolfgang von Goethe
-        &lt;/persName&gt;
-        &lt;placeName ref="http://www.geonames.org/2812482"&gt;
-            Weimar
-        &lt;/placeName&gt;
-        &lt;date when="1793-12-05"&gt;5.12.1793&lt;/date&gt;
+       &lt;persName ref="http://d-nb.info/gnd/118540238"&gt;Goethe, Johann Wolfgang von&lt;/persName&gt;
+       &lt;placeName ref="http://www.geonames.org/2809346"&gt;Wiesbaden&lt;/placeName&gt;
+       &lt;date when="1814-08-29"/&gt;
     &lt;/correspAction&gt;
-&lt;/correspDesc&gt;
+    &lt;correspAction type="received"&gt;
+       &lt;persName ref="http://d-nb.info/gnd/116543671"&gt;Riemer, Friedrich Wilhelm&lt;/persName&gt;
+       &lt;placeName ref="http://www.geonames.org/2812482"&gt;Weimar&lt;/placeName&gt;
+    &lt;/correspAction&gt;
+ &lt;/correspDesc&gt;
 </code></pre>
+        <p><a href="http://correspsearch.net/api/v1/tei-xml.xql?correspondent=http://d-nb.info/gnd/118540238&startdate=1814-08-29&enddate=1814-08-29">Quelle</a> in correspSearch</p>
         </div>
 
         <div class="step">
             <h2 class="down-25">
-              Beispiel »corresp«
+              Beispiel »cmi«
             </h2>
             <h3 class="red up-25">Eine Mini-Ontologie für Briefkorrespondenzen nach TEI/CMI</h3>
             <h4 style="margin-top: -14px;">
-                 Eingebundene Vokabulare und Klassendefinitionen (classes)
+                 Vokabulare und Klassendefinitionen
             </h4>
-<form><textarea id="corresp-1" name="correps-1">
+<form><textarea id="cmi-1" name="correps-1">
 @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
@@ -491,86 +491,79 @@ scheme     authority       path        query fragment
 @prefix time: &lt;http://www.w3.org/2006/time#&gt; .
 @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
 @prefix geo: &lt;https://www.w3.org/2003/01/geo/wgs84_pos#&gt; .
-@prefix corresp: &lt;http://lod.academy/correspDesc/vocab/&gt; .
+@prefix cmi: &lt;https://lod.academy/cmi/vocab/&gt; .
 
-corresp:Letter a rdfs:Class ;
+cmi:Letter a rdfs:Class ;
     rdfs:subClassOf time:Instant ;
     rdfs:label "Letter" .
 
-corresp:Recipient a rdfs:Class ;
+cmi:Recipient a rdfs:Class ;
     rdfs:subClassOf foaf:Person ;
     rdfs:comment "A person who receives a letter" ;
     rdfs:label "Recipient" .
 
-corresp:Sender a rdfs:Class ;
+cmi:Sender a rdfs:Class ;
     rdfs:subClassOf foaf:Person ;
     rdfs:comment "A person who sends a letter" ;
     rdfs:label "Sender" .</textarea></form>
-            <p class="x-small" style="margin-top: -14px;">
-                Datei: <a href="data/ttl/corresp.ttl">corresp.ttl</a>
-            </p>
         </div>
 
         <div class="step">
             <h2 class="down-25">
-              Beispiel »corresp«
+              Beispiel »cmi«
             </h2>
             <h3 class="red up-25">Eine Mini-Ontologie für Briefkorrespondenzen nach TEI/CMI</h3>
             <h4 style="margin-top: -14px;">
-                 Definition der Eigenschaften (properties)
+                 Definition der Eigenschaften
             </h4>
             <div class="row">
                 <div class="six columns">
-<form><textarea id="corresp-2" name="corresp-2">
-corresp:received a rdf:Property ;
-    rdfs:domain cd:Recipient ;
-    rdfs:range cd:Letter ;
+<form><textarea id="cmi-2" name="cmi-2">
+cmi:received a rdf:Property ;
+    rdfs:domain cmi:Recipient ;
+    rdfs:range cmi:Letter ;
     rdfs:comment "The act of receiving a letter" ;
-    rdfs:label "receiving" .
+    rdfs:label "received" .
 
-corresp:sent a rdf:Property ;
-    rdfs:domain cd:Sender ;
-    rdfs:range cd:Letter ;
+cmi:sent a rdf:Property ;
+    rdfs:domain cmi:Sender ;
+    rdfs:range cmi:Letter ;
     rdfs:comment "The act of sending a letter" ;
-    rdfs:label "sending" ;
-    owl:inverseOf cd:receiving .
+    rdfs:label "sent" ;
+    owl:inverseOf cmi:received .
 
-corresp:communicating a rdf:Property ;
+cmi:communicating a rdf:Property ;
     rdfs:domain foaf:Person ;
     rdfs:range foaf:Person ;
-    owl:sameAs cd:receiving , cd:sending .
+    owl:sameAs cmi:received , cmi:sent .
 
-corresp:sentFrom a rdf:Property ;
-    rdfs:domain cd:Letter ;
+cmi:sentFrom a rdf:Property ;
+    rdfs:domain cmi:Letter ;
     rdfs:range geo:SpatialThing ;
     rdfs:comment "A letter is sent from a place" ;
     rdfs:label "sent from" .</textarea></form>
                 </div>
                 <div class="six columns">
-<form><textarea id="corresp-3" name="corresp-3">
-corresp:sentTo a rdf:Property ;
-    rdfs:domain cd:Letter ;
+<form><textarea id="cmi-3" name="cmi-3">
+cmi:sentTo a rdf:Property ;
+    rdfs:domain cmi:Letter ;
     rdfs:range geo:SpatialThing ;
     rdfs:comment "A letter is sent to a place" ;
     rdfs:label "sent to" ;
-    owl:inverseOf cd:sentFrom .
+    owl:inverseOf cmi:sentFrom .
 
-corresp:dateSent a rdf:Property ;
+cmi:dateSent a rdf:Property ;
     rdfs:subPropertyOf time:inXSDDateTime ;
-    rdfs:domain cd:Letter ;
+    rdfs:domain cmi:Letter ;
     rdfs:range xsd:dateTime .
 
-corresp:dateReceived a rdf:Property ;
+cmi:dateReceived a rdf:Property ;
     rdfs:subPropertyOf time:inXSDDateTime ;
-    rdfs:domain cd:Letter ;
+    rdfs:domain cmi:Letter ;
     rdfs:range xsd:dateTime ;
-    owl:inverseOf cd:dateSent .</textarea></form>
+    owl:inverseOf cmi:dateSent .</textarea></form>
                 </div>
             </div>
-
-            <p class="x-small up-25">
-                Datei: <a href="data/ttl/corresp.ttl">corresp.ttl</a>
-            </p>
         </div>
 
         <div class="step">
@@ -1744,7 +1737,6 @@ corresp:dateReceived a rdf:Property ;
                         <ul>
                             <li><a href="http://de.dbpedia.org/onlinezugriff">DBPedia</a></li>
                             <li><a href="http://labs.europeana.eu/api/linked-open-data-sparql-endpoint">Europeana</a></li>
-                            <li><a href="http://lod.academy">Workshop Demo</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1946,7 +1938,7 @@ GROUP BY ?gender</textarea></form>
         <div class="step">
             <h2>Beispiel 1</h2>
             <h3 class="red up-25">
-                correspSearch: Korrespondenznetzwerke (sgvizler)
+                cmiSearch: Korrespondenznetzwerke (sgvizler)
             </h3>
             <p>
                 <a href="http://dhd2016.digitale-akademie.de/presentation/viz/map.html" title="Zur Kartenvisualisierung">
@@ -2042,7 +2034,7 @@ GROUP BY ?gender</textarea></form>
     <script src="resources/codemirror/addon/edit/matchbrackets.js"></script>
     <script src="resources/codemirror/mode/sparql/sparql.js"></script>
     <script>
-        var editor = CodeMirror.fromTextArea(document.getElementById("corresp-1"), {
+        var editor = CodeMirror.fromTextArea(document.getElementById("cmi-1"), {
             mode: "application/sparql-query",
             matchBrackets: true,
             lineNumbers: true,
@@ -2050,7 +2042,7 @@ GROUP BY ?gender</textarea></form>
         });
     </script>
     <script>
-        var editor = CodeMirror.fromTextArea(document.getElementById("corresp-2"), {
+        var editor = CodeMirror.fromTextArea(document.getElementById("cmi-2"), {
             mode: "application/sparql-query",
             matchBrackets: true,
             lineNumbers: true,
@@ -2058,7 +2050,7 @@ GROUP BY ?gender</textarea></form>
         });
     </script>
     <script>
-        var editor = CodeMirror.fromTextArea(document.getElementById("corresp-3"), {
+        var editor = CodeMirror.fromTextArea(document.getElementById("cmi-3"), {
             mode: "application/sparql-query",
             matchBrackets: true,
             lineNumbers: true,

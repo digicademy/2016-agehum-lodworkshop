@@ -5,60 +5,60 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <https://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix corresp: <https://lod.academy/correspDesc/vocab/> .
+@prefix cmi: <https://lod.academy/cmi/vocab/> .
 
-corresp:Letter a rdfs:Class ;
+cmi:Letter a rdfs:Class ;
     rdfs:subClassOf time:Instant ;
     rdfs:label "Letter" .
 
-corresp:Recipient a rdfs:Class ;
+cmi:Recipient a rdfs:Class ;
     rdfs:subClassOf foaf:Person ;
     rdfs:comment "A person who receives a letter" ;
     rdfs:label "Recipient" .
 
-corresp:Sender a rdfs:Class ;
+cmi:Sender a rdfs:Class ;
     rdfs:subClassOf foaf:Person ;
     rdfs:comment "A person who sends a letter" ;
     rdfs:label "Sender" .
 
-corresp:received a rdf:Property ;
-    rdfs:domain cd:Recipient ;
-    rdfs:range cd:Letter ;
+cmi:received a rdf:Property ;
+    rdfs:domain cmi:Recipient ;
+    rdfs:range cmi:Letter ;
     rdfs:comment "The act of receiving a letter" ;
-    rdfs:label "receiving" .
+    rdfs:label "received" .
 
-corresp:sent a rdf:Property ;
-    rdfs:domain cd:Sender ;
-    rdfs:range cd:Letter ;
+cmi:sent a rdf:Property ;
+    rdfs:domain cmi:Sender ;
+    rdfs:range cmi:Letter ;
     rdfs:comment "The act of sending a letter" ;
-    rdfs:label "sending" ;
-    owl:inverseOf cd:receiving .
+    rdfs:label "sent" ;
+    owl:inverseOf cmi:received .
 
-corresp:communicating a rdf:Property ;
+cmi:communicating a rdf:Property ;
     rdfs:domain foaf:Person ;
     rdfs:range foaf:Person ;
-    owl:sameAs cd:receiving , cd:sending .
+    owl:sameAs cmi:received , cmi:sent .
 
-corresp:sentFrom a rdf:Property ;
-    rdfs:domain cd:Letter ;
+cmi:sentFrom a rdf:Property ;
+    rdfs:domain cmi:Letter ;
     rdfs:range geo:SpatialThing ;
     rdfs:comment "A letter is sent from a place" ;
     rdfs:label "sent from" .
 
-corresp:sentTo a rdf:Property ;
-    rdfs:domain cd:Letter ;
+cmi:sentTo a rdf:Property ;
+    rdfs:domain cmi:Letter ;
     rdfs:range geo:SpatialThing ;
     rdfs:comment "A letter is sent to a place" ;
     rdfs:label "sent to" ;
-    owl:inverseOf cd:sentFrom .
+    owl:inverseOf cmi:sentFrom .
 
-corresp:dateSent a rdf:Property ;
+cmi:dateSent a rdf:Property ;
     rdfs:subPropertyOf time:inXSDDateTime ;
-    rdfs:domain cd:Letter ;
+    rdfs:domain cmi:Letter ;
     rdfs:range xsd:dateTime .
 
-corresp:dateReceived a rdf:Property ;
+cmi:dateReceived a rdf:Property ;
     rdfs:subPropertyOf time:inXSDDateTime ;
-    rdfs:domain cd:Letter ;
+    rdfs:domain cmi:Letter ;
     rdfs:range xsd:dateTime ;
-    owl:inverseOf cd:dateSent .
+    owl:inverseOf cmi:dateSent .
