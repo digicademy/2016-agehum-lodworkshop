@@ -1,4 +1,1 @@
-- fix CVMA
-- lod.academy provisioning
-- extract correspSearch with modified ontology
-- put data and queries into rdf4j
+

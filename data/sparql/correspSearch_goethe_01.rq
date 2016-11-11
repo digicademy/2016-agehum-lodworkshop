@@ -1,7 +1,0 @@
-PREFIX cd: <http://www.tei-c.org/ns/1.0/correspDesc#>
-SELECT DISTINCT ?name
-WHERE {
-  ?person rdf:type cd:Recipient .
-  ?person rdfs:label ?name .
-  FILTER NOT EXISTS { ?person cd:sending ?letter . }
-}

@@ -354,11 +354,11 @@ scheme     authority       path        query fragment
             </h2>
             <h3 class="red">Triple (Turtle/RDF)</h3>
 <pre class="pull-25" style="width: 108%;">
-<code class="xml" style="font-size: 13px; padding-left: 0;">   <span class="subject-color">&lt;http://d-nb.info/gnd/118540238&gt;</span> <span class="predicate-color">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt;</span> <span class="object-color">&lt;https://lod.academy/correspDesc/vocab/#Sender&gt;</span> ;
-                                   <span class="predicate-color">&lt;https://lod.academy/correspDesc/vocab/#sent&gt;</span>      <span class="object-color">&lt;https://lod.academy/correspDesc/vocab/#Letter&gt;</span> .
+<code class="xml" style="font-size: 13px; padding-left: 0;">   <span class="subject-color">&lt;http://d-nb.info/gnd/118540238&gt;</span> <span class="predicate-color">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt;</span> <span class="object-color">&lt;http://lod.academy/correspDesc/vocab/#Sender&gt;</span> ;
+                                   <span class="predicate-color">&lt;http://lod.academy/correspDesc/vocab/#sent&gt;</span>      <span class="object-color">&lt;http://lod.academy/correspDesc/vocab/#Letter&gt;</span> .
 
-   <span class="subject-color">&lt;https://lod.academy/correspDesc/vocab/#Letter&gt;</span> <span class="predicate-color">&lt;https://lod.academy/correspDesc/vocab/#dateSent&gt;</span> <span class="object-color">"1793"</span> ;
-                                                   <span class="predicate-color">&lt;https://lod.academy/correspDesc/vocab/#sentFrom&gt;</span> <span class="object-color">&lt;http://www.geonames.org/2812482&gt;</span> .
+   <span class="subject-color">&lt;http://lod.academy/correspDesc/vocab/#Letter&gt;</span> <span class="predicate-color">&lt;http://lod.academy/correspDesc/vocab/#dateSent&gt;</span> <span class="object-color">"1793"</span> ;
+                                                   <span class="predicate-color">&lt;http://lod.academy/correspDesc/vocab/#sentFrom&gt;</span> <span class="object-color">&lt;http://www.geonames.org/2812482&gt;</span> .
 
    <span class="subject-color">&lt;http://www.geonames.org/2812482&gt;</span> <span class="predicate-color">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt;</span> <span class="object-color">&lt;https://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing&gt;</span> ;
                                      <span class="predicate-color">&lt;https://www.w3.org/2003/01/geo/wgs84_pos#lat&gt;</span>    <span class="object-color">"50.98"</span> ;
@@ -491,7 +491,7 @@ scheme     authority       path        query fragment
 @prefix time: &lt;http://www.w3.org/2006/time#&gt; .
 @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
 @prefix geo: &lt;https://www.w3.org/2003/01/geo/wgs84_pos#&gt; .
-@prefix corresp: &lt;https://lod.academy/correspDesc/vocab/&gt; .
+@prefix corresp: &lt;http://lod.academy/correspDesc/vocab/&gt; .
 
 corresp:Letter a rdfs:Class ;
     rdfs:subClassOf time:Instant ;
@@ -1729,27 +1729,6 @@ corresp:dateReceived a rdf:Property ;
 
         <div class="step">
             <h2>
-               SPARQL
-            </h2>
-            <h3 class="red up-25">Grundlagen und Hintergründe</h3>
-            <ul>
-                <li class="substep">
-
-                </li>
-                <li class="substep">
-
-                </li>
-                <li class="substep">
-
-                </li>
-                <li class="substep">
-
-                </li>
-            </ul>
-        </div>
-
-        <div class="step">
-            <h2>
                SPARQL Endpoint
             </h2>
             <h3 class="red up-25">Konzept und Beispiele</h3>
@@ -1765,7 +1744,7 @@ corresp:dateReceived a rdf:Property ;
                         <ul>
                             <li><a href="http://de.dbpedia.org/onlinezugriff">DBPedia</a></li>
                             <li><a href="http://labs.europeana.eu/api/linked-open-data-sparql-endpoint">Europeana</a></li>
-                            <li><a href="https://rdf4j-iss.adwmainz.net">Workshop Demo</a></li>
+                            <li><a href="http://lod.academy">Workshop Demo</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1874,6 +1853,52 @@ WHERE {
 LIMIT 50</textarea></form>
         <p>
             <a href="data/sparql/basics_05.rq">
+                Query kopieren
+            </a>
+        </p>
+        </div>
+
+        <div class="step">
+            <h2>SPARQL Beispiele</h2>
+            <h3 class="red up-25 after-25">Epidat: Welche E19_Physical_Objects gibt es?</h3>
+<form><textarea id="sparql-6" name="sparql-6">
+PREFIX epidat:&lt;http://www.steinheim-institut.de/cgi-bin/epidat?id=&gt;
+PREFIX rdf:&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs:&lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX xsd:&lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX crm:&lt;http://erlangen-crm.org/160331/&gt;
+
+SELECT ?E19_Physical_Object
+WHERE {
+   ?E19_Physical_Object rdf:type &lt;http://erlangen-crm.org/160331/E19_Physical_Object&gt; .
+}
+GROUP BY ?E19_Physical_Object
+ORDER BY ?E19_Physical_Object</textarea></form>
+        <p>
+            <a href="data/sparql/epidat_aha_01.rq">
+                Query kopieren
+            </a>
+        </p>
+        </div>
+
+        <div class="step">
+            <h2>SPARQL Beispiele</h2>
+            <h3 class="red up-25 after-25">Epidat: Wieviele Grabsteine sind von Frauen, wieviele von Männern?</h3>
+<form><textarea id="sparql-7" name="sparql-7">
+PREFIX epidat:&lt;http://www.steinheim-institut.de/cgi-bin/epidat?id=&gt;
+PREFIX rdf:&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs:&lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX xsd:&lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX crm:&lt;http://erlangen-crm.org/160331/&gt;
+
+SELECT ?gender (COUNT(DISTINCT ?E55_Type) AS ?typeCount)
+WHERE {
+   ?E55_Type rdf:type &lt;http://erlangen-crm.org/160331/E55_Type&gt; .
+   ?E55_Type crm:P3_has_note ?gender .
+}
+GROUP BY ?gender</textarea></form>
+        <p>
+            <a href="data/sparql/epidat_aha_02.rq">
                 Query kopieren
             </a>
         </p>
@@ -2074,6 +2099,22 @@ LIMIT 50</textarea></form>
     </script>
     <script>
         var editor = CodeMirror.fromTextArea(document.getElementById("sparql-5"), {
+            mode: "application/sparql-query",
+            matchBrackets: true,
+            lineNumbers: true,
+            viewportMargin: Infinity
+        });
+    </script>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("sparql-6"), {
+            mode: "application/sparql-query",
+            matchBrackets: true,
+            lineNumbers: true,
+            viewportMargin: Infinity
+        });
+    </script>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("sparql-7"), {
             mode: "application/sparql-query",
             matchBrackets: true,
             lineNumbers: true,
