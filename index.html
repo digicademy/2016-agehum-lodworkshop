@@ -1728,6 +1728,77 @@ corresp:dateReceived a rdf:Property ;
         </div>
 
         <div class="step">
+            <h2>
+               SPARQL
+            </h2>
+            <h3 class="red up-25">Grundlagen und Hintergründe</h3>
+            <ul>
+                <li class="substep">
+
+                </li>
+                <li class="substep">
+
+                </li>
+                <li class="substep">
+
+                </li>
+                <li class="substep">
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>
+               SPARQL Endpoint
+            </h2>
+            <h3 class="red up-25">Konzept und Beispiele</h3>
+            <div class="mfp-lightbox center">
+                <div class="row down-25">
+                    <div class="eight columns">
+                        <a href="resources/img/sparql_endpoint.png">
+                            <img src="resources/img/sparql_endpoint.png" />
+                        </a>
+                    </div>
+                    <div class="four columns">
+                        <h4>Beispiel-Endpoints</h4>
+                        <ul>
+                            <li><a href="http://de.dbpedia.org/onlinezugriff">DBPedia</a></li>
+                            <li><a href="http://labs.europeana.eu/api/linked-open-data-sparql-endpoint">Europeana</a></li>
+                            <li><a href="https://rdf4j-iss.adwmainz.net">Workshop Demo</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>SPARQL Grundlagen</h2>
+            <h3 class="red up-25 after-25">Basisstruktur eines Queries</h3>
+<form><textarea id="sparql-1" name="sparql-1">
+PREFIX rel: &lt;http://purl.org/vocab/relationship/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+
+SELECT DISTINCT ?subject ?subjectLabel ?object ?objectLabel ?predicate
+WHERE {
+    ?subject ?predicate ?object .
+    ?subject (rel:parentOf|^rel:parentOf|rel:spouseOf) ?object .
+    ?subject rdfs:label ?subjectLabel .
+    ?object rdfs:label ?objectLabel .
+    ?subject foaf:gender ?subjectGender .
+    ?object foaf:gender ?objectGender .
+    BIND (IF(?subjectGender = "male"@en, "gold", "yellowgreen") AS ?sourceColor)
+    BIND (IF(?objectGender = "male"@en, "gold", "yellowgreen") AS ?targetColor)
+}</textarea></form>
+        <p>
+             Website:  <a href="https://codemirror.net/">https://codemirror.net/</a>
+        </p>
+        </div>
+
+        <div class="step">
             <h1 class="red">04</h1>
             <h2>
                Visualisieren
@@ -1735,6 +1806,74 @@ corresp:dateReceived a rdf:Property ;
             <h3 class="red">
                Bibliotheken für die Visualisierung von SPARQL Abfragen
             </h3>
+        </div>
+
+        <div class="step">
+            <h2>
+               Bibliotheken
+            </h2>
+            <h3 class="red up-25">sgvizler und d3sparql</h3>
+            <div class="row mfp-lightbox centered">
+                <div class="six columns">
+                    <a href="http://mgskjaeveland.github.io/sgvizler/">
+                        <img src="resources/img/sgvizler.png" />
+                    </a>
+                    <p class="medium">
+                        <a href="http://mgskjaeveland.github.io/sgvizler/">
+                            http://mgskjaeveland.github.io/sgvizler/
+                        </a>
+                    </p>
+                </div>
+                <div class="six columns">
+                    <a href="http://biohackathon.org/d3sparql/">
+                        <img src="resources/img/d3sparql" />
+                    </a>
+                    <p class="medium">
+                        <a href="http://biohackathon.org/d3sparql/">
+                            http://biohackathon.org/d3sparql/
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Beispiel 1</h2>
+            <h3 class="red up-25">
+                correspSearch: Korrespondenznetzwerke (sgvizler)
+            </h3>
+            <p>
+                <a href="http://dhd2016.digitale-akademie.de/presentation/viz/map.html" title="Zur Kartenvisualisierung">
+                    <img style="width: auto;" src="resources/img/map.png" alt="Kartenvisualisierung" title="Visualisierung von Korrespondenznetzwerken"><br/>
+                    Kartenvisualisierung aufrufen
+                </a>
+            </p>
+        </div>
+
+        <div class="step">
+            <h2>Beispiel 2</h2>
+            <h3 class="red up-25">
+                Epidat: Familienbeziehungen auf dem Friedhof Ahaus (sgvizler)
+            </h3>
+            <p>
+                <a href="http://dhd2016.digitale-akademie.de/workshop/tools/sgvizler/graph_aha-family-relations.html" title="Zur Visualisierung">
+                    <img style="width: auto;" src="resources/img/families.png" alt="Graphvisualisierung" title="Visualisierung von Familienbeziehungen"><br/>
+                    Graph-Visualisierung aufrufen
+                </a>
+            </p>
+        </div>
+
+        <div class="step">
+            <h2>Beispiel 3</h2>
+            <h3 class="red up-25">
+                Epidat: Jüdische Grabsteinsymbole pro Friedhof (d3sparql)
+            </h3>
+            <p>
+                <a href="http://dhd2016.digitale-akademie.de/workshop/tools/d3sparql/sunburst_symbole-orte.html" title="Zur Visualisierung">
+                    <img style="width: auto;" src="resources/img/symbols.png" alt="Sunburst-Visualsierung" title="Visualisierung von Grabsteinsymbolen"><br/>
+                    Sunburst-Visualisierung aufrufen
+                </a>
+            </p>
         </div>
 
         <div class="step">
@@ -1814,6 +1953,14 @@ corresp:dateReceived a rdf:Property ;
     </script>
     <script>
         var editor = CodeMirror.fromTextArea(document.getElementById("corresp-3"), {
+            mode: "application/sparql-query",
+            matchBrackets: true,
+            lineNumbers: true,
+            viewportMargin: Infinity
+        });
+    </script>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("sparql-1"), {
             mode: "application/sparql-query",
             matchBrackets: true,
             lineNumbers: true,
