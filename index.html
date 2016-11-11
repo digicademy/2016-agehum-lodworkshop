@@ -1788,7 +1788,93 @@ WHERE {
 LIMIT 50</textarea></form>
         <p>
             <a href="data/sparql/basics_01.rq">
-                Query zum Kopieren
+                Query kopieren
+            </a>
+        </p>
+        </div>
+
+        <div class="step">
+            <h2>SPARQL Grundlagen</h2>
+            <h3 class="red up-25 after-25">Alle Triple in einem Datenset (auch <em>named graphs</em>)</h3>
+<form><textarea id="sparql-2" name="sparql-2">
+PREFIX rdf:&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs:&lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX owl:&lt;http://www.w3.org/2002/07/owl#&gt;
+
+SELECT ?g ?s ?p ?o
+WHERE {
+    { ?s ?p ?o }
+    UNION
+    { GRAPH ?g { ?s ?p ?o } }
+}
+LIMIT 50</textarea></form>
+        <p>
+            <a href="data/sparql/basics_02.rq">
+                Query kopieren
+            </a>
+        </p>
+        </div>
+
+        <div class="step">
+            <h2>SPARQL Grundlagen</h2>
+            <h3 class="red up-25 after-25">Welche Klassen gibt es?</h3>
+<form><textarea id="sparql-3" name="sparql-3">
+PREFIX rdf:&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs:&lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX owl:&lt;http://www.w3.org/2002/07/owl#&gt;
+
+SELECT *
+WHERE {
+    { ?class a owl:Class }
+    UNION
+    { ?class a rdfs:Class }
+    ?class a ?classType
+}</textarea></form>
+        <p>
+            <a href="data/sparql/basics_03.rq">
+                Query kopieren
+            </a>
+        </p>
+        </div>
+
+        <div class="step">
+            <h2>SPARQL Grundlagen</h2>
+            <h3 class="red up-25 after-25">Welche Prädikate (properties) gibt es?</h3>
+<form><textarea id="sparql-4" name="sparql-4">
+PREFIX rdf:&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs:&lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX owl:&lt;http://www.w3.org/2002/07/owl#&gt;
+
+SELECT *
+WHERE {
+    ?propClass rdfs:subClassOf+ rdf:Property .
+    ?property a ?propClass .
+}</textarea></form>
+        <p>
+            <a href="data/sparql/basics_04.rq">
+                Query kopieren
+            </a>
+        </p>
+        </div>
+
+        <div class="step">
+            <h2>SPARQL Grundlagen</h2>
+            <h3 class="red up-25 after-25">Welche Prädikate werden benutzt?</h3>
+<form><textarea id="sparql-5" name="sparql-5">
+PREFIX rdf:&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs:&lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX owl:&lt;http://www.w3.org/2002/07/owl#&gt;
+
+SELECT DISTINCT ?graph ?property
+WHERE {
+    { ?s ?property ?o . }
+    UNION
+    { GRAPH ?graph { ?s ?property ?o } }
+}
+LIMIT 50</textarea></form>
+        <p>
+            <a href="data/sparql/basics_05.rq">
+                Query kopieren
             </a>
         </p>
         </div>
@@ -1956,6 +2042,38 @@ LIMIT 50</textarea></form>
     </script>
     <script>
         var editor = CodeMirror.fromTextArea(document.getElementById("sparql-1"), {
+            mode: "application/sparql-query",
+            matchBrackets: true,
+            lineNumbers: true,
+            viewportMargin: Infinity
+        });
+    </script>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("sparql-2"), {
+            mode: "application/sparql-query",
+            matchBrackets: true,
+            lineNumbers: true,
+            viewportMargin: Infinity
+        });
+    </script>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("sparql-3"), {
+            mode: "application/sparql-query",
+            matchBrackets: true,
+            lineNumbers: true,
+            viewportMargin: Infinity
+        });
+    </script>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("sparql-4"), {
+            mode: "application/sparql-query",
+            matchBrackets: true,
+            lineNumbers: true,
+            viewportMargin: Infinity
+        });
+    </script>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("sparql-5"), {
             mode: "application/sparql-query",
             matchBrackets: true,
             lineNumbers: true,
